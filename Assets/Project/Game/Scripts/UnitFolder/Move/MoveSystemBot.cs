@@ -9,8 +9,8 @@ namespace Project.Game.Scripts.UnitFolder.Move
         public event Action finishMove;
         private bool isMoveToPosition;
         
-
-        public MoveSystemBot(Transform transform, Unit unit) : base(transform, unit)
+        public MoveSystemBot(GameStatus gameStatus, Transform transform, Unit unit) 
+            : base(gameStatus, transform, unit)
         {
         }
 
@@ -18,6 +18,8 @@ namespace Project.Game.Scripts.UnitFolder.Move
         {
             UpdatePositionFromDistance();
         }
+
+        protected override float GetSpeed() => 0.5f + gameStatus.Level * 0.1f;
 
         private void UpdatePositionFromDistance()
         {

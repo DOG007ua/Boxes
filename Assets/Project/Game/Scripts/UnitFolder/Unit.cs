@@ -7,7 +7,7 @@ namespace Project.Game.Scripts.UnitFolder
     public class Unit : MonoBehaviour
     {
         public float HP { get; private set; }
-        public float Speed => GetSpeed();
+        
         public event Action<GameObject> destroyUnit;
         private GameStatus gameStatus;
 
@@ -28,8 +28,6 @@ namespace Project.Game.Scripts.UnitFolder
         
         }
         
-        protected virtual float GetSpeed() => 1;
-    
         public void DestroyUnit()
         {
             destroyUnit.Invoke(this.gameObject);

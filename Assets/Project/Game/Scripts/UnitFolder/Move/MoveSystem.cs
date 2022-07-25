@@ -15,18 +15,22 @@ namespace Project.Game.Scripts.UnitFolder.Move
             }
         }
         
+        public float Speed => GetSpeed();
+        protected GameStatus gameStatus;
         protected Transform transform;
         protected Unit unit;
         protected Vector3 positionMove;
         private bool isBlockMove = false;
         private Tween tweenMove;
+        
 
-        protected MoveSystem(Transform transform, Unit unit)
+        protected MoveSystem(GameStatus gameStatus, Transform transform, Unit unit)
         {
+            this.gameStatus = gameStatus;
             this.transform = transform;
             this.unit = unit;
         }
-        
+
         public virtual void Execute(){} //сделать абстрактным
         public void MoveToPosition(Vector3 position)
         {
@@ -34,23 +38,20 @@ namespace Project.Game.Scripts.UnitFolder.Move
             
             positionMove = position;
             tweenMove.Kill();
-            tweenMove = transform.DOMove(position, unit.Speed);
+            tweenMove = transform.DOMove(position, Speed);
         }
-        
 
         public void MoveToDirection(Vector3 vector)
         {
             if (IsBlockMove) return;
-            transform.position += vector * unit.Speed;
+            transform.position += vector * Speed;
         }
 
         public void Stop()
         {
             tweenMove.Kill();
         }
-
-
-
         
+        protected virtual float GetSpeed() => 1;
     }
 }
