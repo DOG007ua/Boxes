@@ -4,27 +4,17 @@ using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Move
 {
-    public class MoveSystemBot : IMoveSystem
+    public class MoveSystemBot : MoveSystem
     {
         public event Action finishMove;
-        private Transform transform;
-        private Unit unit;
-        private Tween tween;
-        public bool IsBlockMove
-        {
-            get => isBlockMove;
-            set
-            {
-                isBlockMove = value;
-                Stop();
-            }
-        }
-        private bool isBlockMove = false;
         private bool isMoveToPosition;
-        private Vector3 positionMove;
+        
 
+        public MoveSystemBot(Transform transform, Unit unit) : base(transform, unit)
+        {
+        }
 
-        public void Execute()
+        public override void Execute()
         {
             UpdatePositionFromDistance();
         }
@@ -33,6 +23,8 @@ namespace Project.Game.Scripts.UnitFolder.Move
         {
             if (isMoveToPosition && IsNeedChangePosition())
             {
+                isMoveToPosition = false;
+                Stop();
                 finishMove?.Invoke();
             }
         }
@@ -41,31 +33,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
         {
             var distance = Vector3.Distance(transform.position, positionMove);
             return distance < 0.5f;
-        }
-        
-        
-        public MoveSystemBot(Transform transform, Unit unit)
-        {
-            this.transform = transform;
-            this.unit = unit;
-        }
-
-        public void MoveToPosition(Vector3 position)
-        {
-            if (IsBlockMove) return;
-            positionMove = position;
-            tween = transform.DOMove(position, unit.Speed);
-        }
-
-        public void MoveToDirection(Vector3 vector)
-        {
-            if (IsBlockMove) return;
-            transform.position += vector * unit.Speed;
-        }
-
-        public void Stop()
-        {
-            tween.Kill();
         }
     }
 }
