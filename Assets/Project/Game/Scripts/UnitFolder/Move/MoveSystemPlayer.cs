@@ -8,7 +8,7 @@ namespace Project.Game.Scripts.UnitFolder.Move
             : base(gameStatus, transform, unit)
         {
         }
-        
+
         protected override float GetSpeed() => 0.5f + gameStatus.Level * 0.1f;
     }
 }
