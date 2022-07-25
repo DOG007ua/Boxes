@@ -1,15 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Project.Game.Scripts.UnitFolder
 {
     public class Unit : MonoBehaviour
     {
         public float HP { get; private set; }
-        public float Speed { get; private set; }
+        public float Speed => GetSpeed();
         public event Action<GameObject> destroyUnit;
-    
-        // Start is called before the first frame update
+        private GameStatus gameStatus;
+
+        public void Initialization(GameStatus gameStatus, float HP)
+        {
+            this.gameStatus = gameStatus;
+            this.HP = HP;
+        }
+
         void Start()
         {
         
@@ -20,20 +27,20 @@ namespace Project.Game.Scripts.UnitFolder
         {
         
         }
+        
+        protected virtual float GetSpeed() => 1;
     
         public void DestroyUnit()
         {
-        
+            destroyUnit.Invoke(this.gameObject);
+            Destroy(this.gameObject);
         }
 
         public void DamageUnit(float value)
         {
             HP -= value;
             if (HP <= 0)
-            {
-                destroyUnit.Invoke(this.gameObject);
-                Destroy(this.gameObject);
-            }
+                DestroyUnit();
         }
     }
 }
