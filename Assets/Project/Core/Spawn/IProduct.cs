@@ -5,6 +5,6 @@ namespace Project.Core.Spawn
 {
     public interface IProduct
     {
-        Unit Spawn();
+        Unit Spawn(TypeUnits typeUnit);
     }
 }

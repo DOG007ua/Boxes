@@ -14,4 +14,9 @@ public class GameStatus
         timeStartGame = DateTime.Now;
         Level = 1;
     }
+
+    public void NextLevel()
+    {
+        Level++;
+    }
 }

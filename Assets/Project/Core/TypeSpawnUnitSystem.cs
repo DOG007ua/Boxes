@@ -2,7 +2,7 @@
 
 namespace Project.Core
 {
-    public class TypeSpawnUnitSystem
+    public class TypeSpawnUnitSystem : ITypeSpawnUnitSystem
     {
         private int maxUnits = 10;
         private List<int> listAmountUnits = new List<int>()

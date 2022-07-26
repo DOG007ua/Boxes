@@ -1,4 +1,5 @@
 ﻿using Project.Core.Spawn;
+using UnityEngine;
 
 namespace Project.Core
 {
@@ -9,7 +10,14 @@ namespace Project.Core
 
         public GameController()
         {
-            
+            Spawner.finishLevel += NextLevel;
+        }
+
+        private void NextLevel()
+        {
+            GameStatus.NextLevel();
+            Spawner.NextLevel();
+            Debug.Log($"Next Level {GameStatus.Level}");
         }
     }
 }
