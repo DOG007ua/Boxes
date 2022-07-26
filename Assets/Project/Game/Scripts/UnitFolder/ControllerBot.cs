@@ -11,7 +11,5 @@ namespace Project.Game.Scripts.UnitFolder
         {
             MoveSystem = new MoveSystemBot(gameStatus, transform, unit);
         }
-        
-        
     }
 }
