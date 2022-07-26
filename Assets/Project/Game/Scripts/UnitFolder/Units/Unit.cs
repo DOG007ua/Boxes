@@ -8,12 +8,14 @@ namespace Project.Game.Scripts.UnitFolder
     {
         public float HP { get; private set; }
         public event Action<GameObject> destroyUnit;
+        public GameObject GameObjectUnit;
         protected IControllerUnit controlelrUnit;
 
-        public void Initialization(IControllerUnit controlelrUnit, float HP)
+        public void Initialization(IControllerUnit controlelrUnit, GameObject gameObject, float HP)
         {
             this.HP = HP;
             this.controlelrUnit = controlelrUnit;
+            this.GameObjectUnit = gameObject;
         }
 
         void Start()

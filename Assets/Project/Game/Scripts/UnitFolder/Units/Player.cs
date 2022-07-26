@@ -1,11 +1,13 @@
-﻿namespace Project.Game.Scripts.UnitFolder
+﻿using UnityEngine;
+
+namespace Project.Game.Scripts.UnitFolder
 {
     public class Player : Unit
     {
-        public void Initialization(GameStatus gameStatus, float HP)
+        public void Initialization(GameStatus gameStatus, GameObject gameObject, float HP)
         {
             IControllerUnit controllerUnit = new ControllerPlayer(gameStatus, transform, this);
-            base.Initialization(controllerUnit, HP);
+            base.Initialization(controllerUnit, gameObject, HP);
         }
 
         void Start()
