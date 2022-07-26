@@ -13,11 +13,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7d33af67-61aa-3c72-cb51-4f19d9126449}</ProjectGuid>
+    <ProjectGuid>{47dc97ea-9f91-708f-1290-ba6a62b99235}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -52,15 +52,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Bot.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystemPlayer.cs" />
+     <Compile Include="Assets\Project\Core\GameController.cs" />
+     <Compile Include="Assets\Project\Core\Spawn\Spawner.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Player.cs" />
+     <Compile Include="Assets\Project\Core\GameStatus.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControllerBot.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystemBot.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\IControllerUnit.cs" />
+     <Compile Include="Assets\Project\Core\Spawn\IProduct.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControllerPlayer.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Unit.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystem.cs" />
+     <Compile Include="Assets\Project\Core\TypeSpawnUnitSystem.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\IMoveSystem.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -735,6 +741,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{7d33af67-61aa-3c72-cb51-4f19d9126449}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boxes.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Boxes.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/GameStatus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/IMoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerUnit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerBot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Project/Core/GameStatus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/Unit/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/Unit/IMoveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/Unit/Move/MoveSystemBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/IMoveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/Bot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerUnit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Bot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2CQxFVFAHyY2kxig2oq4Ks4u0IJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="" />
+      <created>1658748507279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658748507279</updated>
+      <workItem from="1658748540468" duration="4326000" />
+      <workItem from="1658760269239" duration="3677000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="594" y="98" key="RiderGenerateDialog" timestamp="1658750828319">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="594" y="98" key="RiderGenerateDialog/0.0.1536.824@0.0.1536.824" timestamp="1658750828319" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1658750856008">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1658750856008" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1658760604382">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1658760604382" />
+  </component>
+</project>
