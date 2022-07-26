@@ -20,7 +20,7 @@ namespace Project.Core.Spawn
             var botGameObject = GameObject.Instantiate(dataBots.prefabBots);
             var botUnit = botGameObject.GetComponent<Unit>();
             var controllerBot = new ControllerBot(gameStatus, botGameObject.transform, botUnit);
-            botUnit.Initialization(controllerBot, botGameObject, 100);
+            botUnit.Initialization(controllerBot, 100);
             return botUnit;
         }
     }

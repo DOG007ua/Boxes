@@ -4,10 +4,10 @@ namespace Project.Game.Scripts.UnitFolder
 {
     public class Player : Unit
     {
-        public void Initialization(GameStatus gameStatus, GameObject gameObject, float HP)
+        public void Initialization(GameStatus gameStatus, float HP)
         {
             IControllerUnit controllerUnit = new ControllerPlayer(gameStatus, transform, this);
-            base.Initialization(controllerUnit, gameObject, HP);
+            base.Initialization(controllerUnit, HP);
         }
 
         void Start()

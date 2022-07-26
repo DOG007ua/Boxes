@@ -5,11 +5,13 @@ namespace Project.Core
 {
     public class GameController
     {
-        public GameStatus GameStatus { get; set; }
+        private GameStatus GameStatus { get; set; }
         private Spawner Spawner;
 
-        public GameController()
+        public GameController(Spawner spawner, GameStatus gameStatus)
         {
+            GameStatus = gameStatus;
+            Spawner = spawner;
             Spawner.finishLevel += NextLevel;
         }
 

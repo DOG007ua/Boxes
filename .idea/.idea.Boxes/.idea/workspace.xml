@@ -20,27 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxes.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Boxes.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,26 +39,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/DataBotsSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/ITypeSpawnUnitSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/GameStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/IMoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerUnit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerBot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Project/Core/GameStatus.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/Unit/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/Unit/IMoveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/Unit/Move/MoveSystemBot.cs" />
@@ -82,18 +73,22 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerUnit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Bot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/GameStatus.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/DataBotsSpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" />
       </list>
     </option>
   </component>
@@ -137,6 +132,7 @@
       <updated>1658748507279</updated>
       <workItem from="1658748540468" duration="4326000" />
       <workItem from="1658760269239" duration="3677000" />
+      <workItem from="1658822542354" duration="3826000" />
     </task>
     <servers />
   </component>

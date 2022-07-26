@@ -11,11 +11,10 @@ namespace Project.Game.Scripts.UnitFolder
         public GameObject GameObjectUnit;
         protected IControllerUnit controlelrUnit;
 
-        public void Initialization(IControllerUnit controlelrUnit, GameObject gameObject, float HP)
+        public void Initialization(IControllerUnit controlelrUnit, float HP)
         {
             this.HP = HP;
             this.controlelrUnit = controlelrUnit;
-            this.GameObjectUnit = gameObject;
         }
 
         void Start()

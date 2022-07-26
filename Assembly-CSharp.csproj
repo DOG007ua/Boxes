@@ -67,6 +67,10 @@
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystem.cs" />
      <Compile Include="Assets\Project\Core\TypeSpawnUnitSystem.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\IMoveSystem.cs" />
+     <Compile Include="Assets\Project\Core\ITypeSpawnUnitSystem.cs" />
+     <Compile Include="Assets\Project\Core\Spawn\DataBotsSpawn.cs" />
+     <Compile Include="Assets\Project\Core\Spawn\CreatorBots.cs" />
+     <Compile Include="Assets\Project\Core\Bootstrap.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
