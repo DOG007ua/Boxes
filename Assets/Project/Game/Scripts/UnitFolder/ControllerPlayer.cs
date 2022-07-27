@@ -12,6 +12,9 @@ namespace Project.Game.Scripts.UnitFolder
             MoveSystem = new MoveSystemPlayer(gameStatus, transform, unit);
         }
         
-        
+        public void Execute()
+        {
+            MoveSystem.Execute();
+        }
     }
 }

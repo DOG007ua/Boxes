@@ -5,5 +5,6 @@ namespace Project.Game.Scripts.UnitFolder
     public interface IControllerUnit
     {
         IMoveSystem MoveSystem { get; }
+        void Execute();
     }
 }

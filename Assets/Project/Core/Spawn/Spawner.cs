@@ -78,7 +78,8 @@ namespace Project.Core.Spawn
             var posY = Random.Range(dataBorder.YMin, dataBorder.YMax);
             var posX = Random.Range(-3, -0.5f);
             bot.gameObject.transform.position = new Vector3(
-                dataBorder.XRight + posX,
+                //dataBorder.XRight + posX,
+                4,
                 posY,
                 0
                 );

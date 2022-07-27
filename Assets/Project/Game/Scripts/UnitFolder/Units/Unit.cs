@@ -25,7 +25,7 @@ namespace Project.Game.Scripts.UnitFolder
         // Update is called once per frame
         void Update()
         {
-        
+            controlelrUnit.Execute();
         }
         
         public void DestroyUnit()

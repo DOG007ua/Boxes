@@ -13,9 +13,9 @@ namespace Project.Game.Scripts.UnitFolder.Move
 
         public override void Execute()
         {
-            
+            base.Execute();
         }
 
-        protected override float GetSpeed() => 0.5f + gameStatus.Level * 0.1f;
+        protected override float GetSpeed() => 1f + gameStatus.Level * 0.02f;
     }
 }

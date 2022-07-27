@@ -5,6 +5,7 @@ namespace Project.Game.Scripts.UnitFolder.Move
 {
     public interface IMoveSystem
     {
+        Vector3 Position { get; }
         event Action finishMove;
         void Execute();
         void MoveToPosition(Vector3 position);
