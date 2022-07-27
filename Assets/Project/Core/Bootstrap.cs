@@ -28,10 +28,6 @@ namespace Project.Core
             dataPositions.YMin = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y;
             dataPositions.YMax = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
             
-            Debug.Log($"XRight {dataPositions.XRight}");
-            Debug.Log($"XLeft {dataPositions.XLeft}");
-            Debug.Log($"YMax {dataPositions.YMax}");
-            Debug.Log($"YMin {dataPositions.YMin}");
             return dataPositions;
         }
     }

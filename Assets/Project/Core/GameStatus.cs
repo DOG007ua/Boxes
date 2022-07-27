@@ -12,7 +12,7 @@ public class GameStatus
     public GameStatus()
     {
         timeStartGame = DateTime.Now;
-        Level = 1;
+        Level = 0;
     }
 
     public void NextLevel()

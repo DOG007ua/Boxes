@@ -8,6 +8,7 @@ namespace Project.Core.Spawn
     {
         private DataBotsSpawn dataBots;
         private GameStatus gameStatus;
+        private int count = 0;
 
         public CreatorBots(DataBotsSpawn dataBots, GameStatus gameStatus)
         {
@@ -18,9 +19,11 @@ namespace Project.Core.Spawn
         public Unit Spawn(TypeUnits typeUnit)
         {
             var botGameObject = GameObject.Instantiate(dataBots.prefabBots);
-            var botUnit = botGameObject.GetComponent<Unit>();
-            var controllerBot = new ControllerBot(gameStatus, botGameObject.transform, botUnit);
-            botUnit.Initialization(controllerBot, 100);
+            var botUnit = botGameObject.GetComponent<Bot>();
+            botUnit.Initialization(gameStatus, 100);
+            botUnit.name = $"Bot_{count}";
+            Debug.Log($"Create {botUnit.name}");
+            count++;
             return botUnit;
         }
     }

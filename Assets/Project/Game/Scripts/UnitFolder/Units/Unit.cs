@@ -11,7 +11,7 @@ namespace Project.Game.Scripts.UnitFolder
         public GameObject GameObjectUnit;
         protected IControllerUnit controlelrUnit;
 
-        public void Initialization(IControllerUnit controlelrUnit, float HP)
+        public virtual void Initialization(IControllerUnit controlelrUnit, float HP)
         {
             this.HP = HP;
             this.controlelrUnit = controlelrUnit;
