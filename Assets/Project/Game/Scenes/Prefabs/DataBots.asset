@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cf5197425f49fcbc82af0a3e8e0ff1, type: 3}
   m_Name: DataBots
   m_EditorClassIdentifier: 
-  prefabBots: {fileID: 0}
+  prefabBots: {fileID: 4623174178842053232, guid: c48407b998f3b29459a7a88b8531f120, type: 3}
