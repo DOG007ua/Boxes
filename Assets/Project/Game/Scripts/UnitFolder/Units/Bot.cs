@@ -6,9 +6,8 @@ namespace Project.Game.Scripts.UnitFolder
     public class Bot : Unit
     {
 
-        public void Initialization(GameStatus gameStatus, float HP)
+        public void Initialization(IControllerUnit controllerUnit, GameStatus gameStatus, float HP)
         {
-            IControllerUnit controllerUnit = new ControllerBot(gameStatus, transform, this);
             base.Initialization(controllerUnit, HP);
         }
 

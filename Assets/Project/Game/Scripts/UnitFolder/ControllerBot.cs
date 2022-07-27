@@ -1,4 +1,5 @@
-﻿using Project.Game.Scripts.UnitFolder.Move;
+﻿using Project.Core;
+using Project.Game.Scripts.UnitFolder.Move;
 using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder
@@ -6,10 +7,14 @@ namespace Project.Game.Scripts.UnitFolder
     public class ControllerBot: IControllerUnit
     {
         public IMoveSystem MoveSystem { get; }
+        private DataBorder dataBorder;
         
-        public ControllerBot(GameStatus gameStatus, Transform transform, Unit unit) 
+        public ControllerBot(GameStatus gameStatus, DataBorder dataBorder ,Transform transform, Unit unit) 
         {
             MoveSystem = new MoveSystemBot(gameStatus, transform, unit);
+            this.dataBorder = dataBorder;
         }
+        
+        
     }
 }

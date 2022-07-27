@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Move
@@ -14,7 +15,7 @@ namespace Project.Game.Scripts.UnitFolder.Move
                 Stop();
             }
         }
-        
+        public event Action finishMove;
         public float Speed => GetSpeed();
         protected GameStatus gameStatus;
         protected Transform transform;
@@ -22,7 +23,7 @@ namespace Project.Game.Scripts.UnitFolder.Move
         protected Vector3 positionMove;
         private bool isBlockMove = false;
         private Tween tweenMove;
-        
+        private bool isMoveToPosition;
 
         protected MoveSystem(GameStatus gameStatus, Transform transform, Unit unit)
         {
@@ -31,14 +32,9 @@ namespace Project.Game.Scripts.UnitFolder.Move
             this.unit = unit;
         }
 
-        public virtual void Execute(){} //сделать абстрактным
-        public void MoveToPosition(Vector3 position)
+        public virtual void Execute()
         {
-            if (IsBlockMove) return;
-            
-            positionMove = position;
-            tweenMove.Kill();
-            tweenMove = transform.DOMove(position, Speed);
+            UpdatePositionFromDistance();
         }
 
         public void MoveToDirection(Vector3 vector)
@@ -50,6 +46,32 @@ namespace Project.Game.Scripts.UnitFolder.Move
         public void Stop()
         {
             tweenMove.Kill();
+        }
+        
+        public void MoveToPosition(Vector3 position)
+        {
+            if (IsBlockMove) return;
+
+            isMoveToPosition = true;
+            positionMove = position;
+            tweenMove.Kill();
+            tweenMove = transform.DOMove(position, Speed);
+        }
+        
+        private void UpdatePositionFromDistance()
+        {
+            if (isMoveToPosition && IsNeedChangePosition())
+            {
+                isMoveToPosition = false;
+                Stop();
+                finishMove?.Invoke();
+            }
+        }
+        
+        private bool IsNeedChangePosition()
+        {
+            var distance = Vector3.Distance(transform.position, positionMove);
+            return distance < 0.5f;
         }
         
         protected virtual float GetSpeed() => 1;

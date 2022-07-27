@@ -14,21 +14,22 @@ namespace Project.Core
         private void Start()
         {
             var gameStatus = new GameStatus();
+            var dataBorder = CalculationBorder();
             spawner = new Spawner(gameStatus, 
-                new CreatorBots(dataBotsSpawn, gameStatus),
-                new TypeSpawnUnitSystem(), CalculationPositions());
+                new CreatorBots(dataBotsSpawn, gameStatus, dataBorder),
+                new TypeSpawnUnitSystem(), dataBorder);
             gameController = new GameController(spawner, gameStatus);
         }
 
-        private DataPositions CalculationPositions()
+        private DataBorder CalculationBorder()
         {
-            DataPositions dataPositions = new DataPositions();
-            dataPositions.XLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
-            dataPositions.XRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
-            dataPositions.YMin = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y;
-            dataPositions.YMax = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
+            DataBorder dataBorder = new DataBorder();
+            dataBorder.XLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
+            dataBorder.XRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
+            dataBorder.YMin = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y;
+            dataBorder.YMax = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
             
-            return dataPositions;
+            return dataBorder;
         }
     }
 }

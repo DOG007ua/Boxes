@@ -13,7 +13,7 @@ namespace Project.Core.Spawn
         public event Action deadBot;
         public event Action finishLevel;
 
-        private DataPositions dataPositions;
+        private DataBorder dataBorder;
         private GameStatus gameStatus;
         private IProduct spawnBot;
         private ITypeSpawnUnitSystem typeSpawnUnits;
@@ -25,12 +25,12 @@ namespace Project.Core.Spawn
         private int amountBots = 0;
         private List<TypeUnits> listSpawnUnitsInLevel;
         
-        public Spawner(GameStatus gameStatus, IProduct spawnBot, ITypeSpawnUnitSystem typeSpawnUnits, DataPositions dataPositions)
+        public Spawner(GameStatus gameStatus, IProduct spawnBot, ITypeSpawnUnitSystem typeSpawnUnits, DataBorder dataBorder)
         {
             this.gameStatus = gameStatus;
             this.spawnBot = spawnBot;
             this.typeSpawnUnits = typeSpawnUnits;
-            this.dataPositions = SetterBorder(dataPositions);
+            this.dataBorder = SetterBorder(dataBorder);
             maxBotsNow = maxBots;
             NextLevel();
             SpawnBot();
@@ -61,9 +61,9 @@ namespace Project.Core.Spawn
             }
         }
 
-        private DataPositions SetterBorder(DataPositions dataBorderScreen)
+        private DataBorder SetterBorder(DataBorder dataBorderScreen)
         {
-            var border = new DataPositions
+            var border = new DataBorder
             {
                 XLeft = dataBorderScreen.XLeft + 1,
                 XRight = dataBorderScreen.XRight - 1,
@@ -75,9 +75,10 @@ namespace Project.Core.Spawn
 
         private void SetterPositionBot(Unit bot)
         {
-            var posY = Random.Range(dataPositions.YMin, dataPositions.YMax);
+            var posY = Random.Range(dataBorder.YMin, dataBorder.YMax);
+            var posX = Random.Range(-3, -0.5f);
             bot.gameObject.transform.position = new Vector3(
-                dataPositions.XRight,
+                dataBorder.XRight + posX,
                 posY,
                 0
                 );
