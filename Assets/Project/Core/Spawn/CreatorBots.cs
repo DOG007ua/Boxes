@@ -22,8 +22,8 @@ namespace Project.Core.Spawn
         {
             var botGameObject = GameObject.Instantiate(dataBots.prefabBots);
             var botUnit = botGameObject.GetComponent<Bot>();
-            IControllerUnit controllerUnit = new ControllerBot(gameStatus, dataBorder, botGameObject.transform, botUnit);
-            botUnit.Initialization(controllerUnit, gameStatus, 100);
+            IControllerUnit controllerUnit = new ControllerBot(gameStatus, dataBorder,  botUnit);
+            botUnit.Initialization(controllerUnit, 100);
             botUnit.name = $"Bot_{count}";
             Debug.Log($"Create {botUnit.name}");
             count++;

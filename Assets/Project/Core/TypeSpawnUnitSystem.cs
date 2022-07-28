@@ -25,7 +25,7 @@ namespace Project.Core
 
             for (int i = 0; i < amountUnits; i++)
             {
-                listUnits.Add(TypeUnits.Default);
+                listUnits.Add(TypeUnits.DefaultBot);
             }
             
             return listUnits;
@@ -35,6 +35,7 @@ namespace Project.Core
 
     public enum TypeUnits
     {
-        Default
+        DefaultBot,
+        Player
     }
 }

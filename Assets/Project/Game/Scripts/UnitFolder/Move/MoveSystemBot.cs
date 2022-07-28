@@ -1,13 +1,14 @@
 ﻿using System;
 using DG.Tweening;
+using Project.Core;
 using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Move
 {
     public class MoveSystemBot : MoveSystem
     {
-        public MoveSystemBot(GameStatus gameStatus, Transform transform, Unit unit) 
-            : base(gameStatus, transform, unit)
+        public MoveSystemBot(GameStatus gameStatus, Transform transform, Unit unit, DataBorder dataBorder) 
+            : base(gameStatus, transform, unit, dataBorder)
         {
         }
 

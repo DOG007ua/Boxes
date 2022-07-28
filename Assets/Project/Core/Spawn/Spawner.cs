@@ -12,10 +12,11 @@ namespace Project.Core.Spawn
     {
         public event Action deadBot;
         public event Action finishLevel;
-
+        public Player Player;
         private DataBorder dataBorder;
         private GameStatus gameStatus;
         private IProduct spawnBot;
+        private IProduct spawnPlayer;
         private ITypeSpawnUnitSystem typeSpawnUnits;
         private int maxBots = 3;
         private int maxBotsNow;
@@ -25,15 +26,18 @@ namespace Project.Core.Spawn
         private int amountBots = 0;
         private List<TypeUnits> listSpawnUnitsInLevel;
         
-        public Spawner(GameStatus gameStatus, IProduct spawnBot, ITypeSpawnUnitSystem typeSpawnUnits, DataBorder dataBorder)
+        public Spawner(GameStatus gameStatus, IProduct spawnBot, IProduct spawnPlayer,
+            ITypeSpawnUnitSystem typeSpawnUnits, DataBorder dataBorder)
         {
             this.gameStatus = gameStatus;
             this.spawnBot = spawnBot;
             this.typeSpawnUnits = typeSpawnUnits;
+            this.spawnPlayer = spawnPlayer;
             this.dataBorder = SetterBorder(dataBorder);
             maxBotsNow = maxBots;
             NextLevel();
             SpawnBot();
+            SpawnPlayer();
             TimerSpawn(2);
         }
 
@@ -61,6 +65,15 @@ namespace Project.Core.Spawn
             }
         }
 
+        private void SpawnPlayer()
+        {
+            var player = spawnPlayer.Spawn(TypeUnits.Player);
+            
+            player.destroyUnit += DeadPlayer;
+            SetterPositionPlayer(player);
+            Player = player.GetComponent<Player>();
+        }
+
         private DataBorder SetterBorder(DataBorder dataBorderScreen)
         {
             var border = new DataBorder
@@ -83,6 +96,15 @@ namespace Project.Core.Spawn
                 posY,
                 0
                 );
+        }
+        
+        private void SetterPositionPlayer(Unit bot)
+        {
+            bot.gameObject.transform.position = new Vector3(
+                dataBorder.XLeft,
+                dataBorder.YMin + (dataBorder.YMax - dataBorder.YMin) / 2.0f,
+                0
+            );
         }
 
         private bool IsNeedSpawnBot() => (amountBots < maxBotsNow);
@@ -111,6 +133,11 @@ namespace Project.Core.Spawn
             {
                 TimerSpawn();
             }
+        }
+        
+        private void DeadPlayer(GameObject bot)
+        {
+            
         }
     }
 }

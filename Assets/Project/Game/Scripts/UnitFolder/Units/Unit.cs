@@ -7,14 +7,15 @@ namespace Project.Game.Scripts.UnitFolder
     public class Unit : MonoBehaviour
     {
         public float HP { get; private set; }
+        public IControllerUnit ControlerUnit { get; private set; }
         public event Action<GameObject> destroyUnit;
         public GameObject GameObjectUnit;
-        protected IControllerUnit controlelrUnit;
+        
 
         public virtual void Initialization(IControllerUnit controlelrUnit, float HP)
         {
             this.HP = HP;
-            this.controlelrUnit = controlelrUnit;
+            this.ControlerUnit = controlelrUnit;
         }
 
         void Start()
@@ -25,7 +26,7 @@ namespace Project.Game.Scripts.UnitFolder
         // Update is called once per frame
         void Update()
         {
-            controlelrUnit.Execute();
+            ControlerUnit.Execute();
         }
         
         public void DestroyUnit()

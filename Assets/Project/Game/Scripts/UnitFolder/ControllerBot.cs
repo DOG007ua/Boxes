@@ -2,12 +2,18 @@
 using Project.Core;
 using Project.Game.Scripts.UnitFolder.Move;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Project.Game.Scripts.UnitFolder
 {
     public class ControllerBot: IControllerUnit
     {
         public IMoveSystem MoveSystem { get; }
+        public void MoveToDirection(Vector3 vector)
+        {
+            MoveSystem.MoveToDirection(vector);
+        }
+
         public void Execute()
         {
             MoveSystem.Execute();
@@ -15,9 +21,9 @@ namespace Project.Game.Scripts.UnitFolder
 
         private DataBorder dataBorder;
         
-        public ControllerBot(GameStatus gameStatus, DataBorder dataBorder ,Transform transform, Unit unit) 
+        public ControllerBot(GameStatus gameStatus, DataBorder dataBorder, Unit unit) 
         {
-            MoveSystem = new MoveSystemBot(gameStatus, transform, unit);
+            MoveSystem = new MoveSystemBot(gameStatus, unit.GameObjectUnit.transform, unit, dataBorder);
             MoveSystem.finishMove += NewPosition;
             this.dataBorder = dataBorder;
 

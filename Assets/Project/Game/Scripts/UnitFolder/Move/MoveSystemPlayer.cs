@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using Project.Core;
+using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Move
 {
     public class MoveSystemPlayer : MoveSystem
     {
-        public MoveSystemPlayer(GameStatus gameStatus, Transform transform, Unit unit) 
-            : base(gameStatus, transform, unit)
+        public MoveSystemPlayer(GameStatus gameStatus, Transform transform, Unit unit, DataBorder dataBorder) 
+            : base(gameStatus, transform, unit, dataBorder)
         {
         }
         

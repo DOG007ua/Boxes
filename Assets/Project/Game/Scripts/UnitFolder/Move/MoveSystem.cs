@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using Project.Core;
 using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Move
@@ -26,12 +27,14 @@ namespace Project.Game.Scripts.UnitFolder.Move
         private bool isBlockMove = false;
         private Tween tweenMove;
         private bool isMoveToPosition;
+        private DataBorder dataBorder;
 
-        protected MoveSystem(GameStatus gameStatus, Transform transform, Unit unit)
+        protected MoveSystem(GameStatus gameStatus, Transform transform, Unit unit, DataBorder dataBorder)
         {
             this.gameStatus = gameStatus;
             this.transform = transform;
             this.unit = unit;
+            this.dataBorder = dataBorder;
         }
 
         public virtual void Execute()
@@ -39,10 +42,20 @@ namespace Project.Game.Scripts.UnitFolder.Move
             UpdatePositionFromDistance();
         }
 
-        public void MoveToDirection(Vector3 vector)
+        public virtual void MoveToDirection(Vector3 vector)
         {
             if (IsBlockMove) return;
-            transform.position += vector * Speed;
+            var newPosition = transform.position + vector * Speed * Time.deltaTime;
+            transform.position = GetPositionBorder(newPosition);
+        }
+
+        private Vector3 GetPositionBorder(Vector3 position)
+        {
+            if (position.x > dataBorder.XRight) position.x = dataBorder.XRight;
+            if (position.x < dataBorder.XLeft) position.x = dataBorder.XLeft;
+            if (position.y > dataBorder.YMax) position.y = dataBorder.YMax;
+            if (position.y < dataBorder.YMin) position.y = dataBorder.YMin;
+            return position;
         }
 
         public void Stop()
