@@ -26,7 +26,14 @@ namespace Project.Game.Scripts.UnitFolder
             unit.eventSpawn += StartMove;
             MoveSystem = new MoveSystemBot(gameStatus, unit.GameObjectUnit.transform, unit, dataBorder);
             MoveSystem.finishMove += NewPosition;
+            unit.destroyUnit += DestroyUnit;
             this.dataBorder = dataBorder;
+        }
+
+        private void DestroyUnit(GameObject gameObject)
+        {
+            MoveSystem.Stop();
+            MoveSystem.IsBlockMove = true;
         }
 
         private void StartMove(GameObject bot)

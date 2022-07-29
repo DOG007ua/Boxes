@@ -27,8 +27,8 @@ namespace Project.Core
 
         private void CreateSpawner(GameStatus gameStatus, DataBorder dataBorder)
         {
-            var creatorBots = new CreatorBots(dataBotsSpawn, gameStatus, dataBorder, new AnimationSpawnScale());
-            var creatorPlayer = new CreatorPlayer(playerPrefab, gameStatus, dataBorder, new AnimationSpawnScale());
+            var creatorBots = new CreatorBots(dataBotsSpawn, gameStatus, dataBorder);
+            var creatorPlayer = new CreatorPlayer(playerPrefab, gameStatus, dataBorder);
             spawner = new Spawner(gameStatus, 
                 creatorBots,
                 creatorPlayer, 

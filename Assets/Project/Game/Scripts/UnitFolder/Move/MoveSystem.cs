@@ -88,7 +88,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
         private bool IsNeedChangePosition()
         {
             var distance = Vector3.Distance(transform.position, positionMove);
-            Debug.Log($"Distance {distance}");
             return distance < 0.1f;
         }
         

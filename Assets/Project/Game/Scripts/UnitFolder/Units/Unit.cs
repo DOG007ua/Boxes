@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Project.Game.Scripts.UnitFolder.Spawn;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -12,22 +13,23 @@ namespace Project.Game.Scripts.UnitFolder
         public event Action<GameObject> destroyUnit;
         public event Action<GameObject> eventSpawn;
         public GameObject GameObjectUnit;
-        private IAnimationSpawn animationSpawn;
+        private IAnimationsUnits animationsUnits;
 
 
-        public virtual void Initialization(IControllerUnit controlerUnit, IAnimationSpawn animationSpawn, float HP)
+        public virtual void Initialization(IControllerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
         {
             this.HP = HP;
             this.ControlerUnit = controlerUnit;
-            this.animationSpawn = animationSpawn;
+            this.animationsUnits = animationsUnits;
             AnimationSpawn();
-            animationSpawn.finishSpawn += (gameObject) => eventSpawn?.Invoke(gameObject);
+            animationsUnits.finishSpawn += (gameObject) => eventSpawn?.Invoke(gameObject);
+            animationsUnits.finishDestroy += DestroyUnit;
         }
         
 
         private void AnimationSpawn()
         {
-            animationSpawn.StartSpawn(GameObjectUnit);
+            animationsUnits.StartSpawn(GameObjectUnit);
         }
 
         void Start()
@@ -41,9 +43,14 @@ namespace Project.Game.Scripts.UnitFolder
             ControlerUnit.Execute();
         }
         
-        public void DestroyUnit()
+        public void StartDestroyUnit()
         {
             destroyUnit.Invoke(this.gameObject);
+            animationsUnits.DestroyUnit(GameObjectUnit);
+        }
+        
+        private void DestroyUnit(GameObject gameObject)
+        {
             Destroy(this.gameObject);
         }
 
@@ -51,7 +58,7 @@ namespace Project.Game.Scripts.UnitFolder
         {
             HP -= value;
             if (HP <= 0)
-                DestroyUnit();
+                StartDestroyUnit();
         }
     }
 }

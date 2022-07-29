@@ -6,10 +6,9 @@ namespace Project.Game.Scripts.UnitFolder
 {
     public class Bot : Unit
     {
-
-        public void Initialization(IControllerUnit controllerUnit, IAnimationSpawn animationSpawn, float HP)
+        public void Initialization(IControllerUnit controllerUnit, IAnimationsUnits animationsUnits, float HP)
         {
-            base.Initialization(controllerUnit, animationSpawn, HP);
+            base.Initialization(controllerUnit, animationsUnits, HP);
         }
 
         private void OnMouseDown()
