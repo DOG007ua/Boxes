@@ -21,16 +21,17 @@ namespace Project.Game.Scripts.UnitFolder
 
         private DataBorder dataBorder;
         
-        public ControllerBot(GameStatus gameStatus, DataBorder dataBorder, Unit unit) 
+        public ControllerBot(GameStatus gameStatus, DataBorder dataBorder, Unit unit)
         {
+            unit.eventSpawn += StartMove;
             MoveSystem = new MoveSystemBot(gameStatus, unit.GameObjectUnit.transform, unit, dataBorder);
             MoveSystem.finishMove += NewPosition;
             this.dataBorder = dataBorder;
+        }
 
-            DOTween.Sequence()
-                .AppendInterval(1)
-                .AppendCallback(NewPosition);
-
+        private void StartMove(GameObject bot)
+        {
+            NewPosition();
         }
 
         private void NewPosition()

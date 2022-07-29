@@ -2,6 +2,7 @@ using System;
 using Project.Core.Input;
 using Project.Core.Spawn;
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Spawn;
 using UnityEngine;
 
 namespace Project.Core
@@ -26,8 +27,8 @@ namespace Project.Core
 
         private void CreateSpawner(GameStatus gameStatus, DataBorder dataBorder)
         {
-            var creatorBots = new CreatorBots(dataBotsSpawn, gameStatus, dataBorder);
-            var creatorPlayer = new CreatorPlayer(playerPrefab, gameStatus, dataBorder);
+            var creatorBots = new CreatorBots(dataBotsSpawn, gameStatus, dataBorder, new AnimationSpawnScale());
+            var creatorPlayer = new CreatorPlayer(playerPrefab, gameStatus, dataBorder, new AnimationSpawnScale());
             spawner = new Spawner(gameStatus, 
                 creatorBots,
                 creatorPlayer, 

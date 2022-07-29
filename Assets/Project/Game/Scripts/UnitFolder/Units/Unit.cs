@@ -1,4 +1,5 @@
 using System;
+using Project.Game.Scripts.UnitFolder.Spawn;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -9,13 +10,24 @@ namespace Project.Game.Scripts.UnitFolder
         public float HP { get; private set; }
         public IControllerUnit ControlerUnit { get; private set; }
         public event Action<GameObject> destroyUnit;
+        public event Action<GameObject> eventSpawn;
         public GameObject GameObjectUnit;
-        
+        private IAnimationSpawn animationSpawn;
 
-        public virtual void Initialization(IControllerUnit controlelrUnit, float HP)
+
+        public virtual void Initialization(IControllerUnit controlerUnit, IAnimationSpawn animationSpawn, float HP)
         {
             this.HP = HP;
-            this.ControlerUnit = controlelrUnit;
+            this.ControlerUnit = controlerUnit;
+            this.animationSpawn = animationSpawn;
+            AnimationSpawn();
+            animationSpawn.finishSpawn += (gameObject) => eventSpawn?.Invoke(gameObject);
+        }
+        
+
+        private void AnimationSpawn()
+        {
+            animationSpawn.StartSpawn(GameObjectUnit);
         }
 
         void Start()
