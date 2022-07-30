@@ -30,7 +30,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
 
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.transform.tag == "Bot")
+            if(collision.transform.tag == tagEnemy)
             {
                 var unit = collision.transform.GetComponent<Unit>();
                 unit.DamageUnit(damage);

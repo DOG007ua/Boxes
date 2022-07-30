@@ -13,15 +13,27 @@ namespace Project.Game.Scripts.UnitFolder
         public IMoveSystem MoveSystem { get; }
         public IGunSystem GunSystem { get; }
 
-        public ControlerBot(DataBorder dataBorder, Unit unit)
+        private float pauseShoot = 1;
+        private Tween tweenShoot;
+
+        public ControlerBot(DataBorder dataBorder, Unit unit, IGun gun)
         {
             unit.eventSpawn += StartMove;
             MoveSystem = new MoveSystemBot(unit.GameObjectUnit.transform, unit, dataBorder);
             MoveSystem.finishMove += NewPosition;
-            
+            GunSystem = new GunSystem(gun);
             
             unit.destroyUnit += DestroyUnit;
             this.dataBorder = dataBorder;
+            FirstShoot();
+        }
+
+        private void FirstShoot()
+        {
+            float timeToNextShoot = Random.Range(1, 3);
+            DOTween.Sequence()
+                .AppendInterval(timeToNextShoot)
+                .AppendCallback(Shoot);
         }
         
         public void MoveToDirection(Vector3 vector)
@@ -31,7 +43,18 @@ namespace Project.Game.Scripts.UnitFolder
 
         public void Shoot()
         {
-            GunSystem.Shoot();
+            float timeToNextShoot = Random.Range(1, 3);
+            
+            MoveSystem.Stop();
+            MoveSystem.IsBlockMove = true;
+            
+            tweenShoot = DOTween.Sequence()
+                .AppendInterval(pauseShoot)
+                .AppendCallback(GunSystem.Shoot)
+                .AppendCallback(() => MoveSystem.IsBlockMove = false)
+                .AppendCallback(NewPosition)
+                .AppendInterval(timeToNextShoot)
+                .AppendCallback(Shoot);
         }
 
         public void Execute()
@@ -41,12 +64,11 @@ namespace Project.Game.Scripts.UnitFolder
 
         private DataBorder dataBorder;
         
-        
-
         private void DestroyUnit(GameObject gameObject)
         {
             MoveSystem.Stop();
             MoveSystem.IsBlockMove = true;
+            tweenShoot.Kill();
         }
 
         private void StartMove(GameObject bot)

@@ -79,7 +79,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
             {
                 isMoveToPosition = false;
                 Stop();
-                Debug.Log("finishMove");
                 finishMove?.Invoke();
             }
         }

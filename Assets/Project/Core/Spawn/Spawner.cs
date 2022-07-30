@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Shoot;
 using Project.Game.Scripts.UnitFolder.Units;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -52,7 +53,7 @@ namespace Project.Core.Spawn
             var needUnit = listSpawnUnitsInLevel.First();
             listSpawnUnitsInLevel.Remove(needUnit);
             
-            var bot = spawnBot.Spawn(needUnit);
+            var bot = spawnBot.Spawn(needUnit, TypeGun.Green);
             
             bot.destroyUnit += DeadBot;
             SetterPositionBot(bot);
@@ -66,7 +67,7 @@ namespace Project.Core.Spawn
 
         private void SpawnPlayer()
         {
-            var player = spawnPlayer.Spawn(TypeUnits.Player);
+            var player = spawnPlayer.Spawn(TypeUnits.Player, TypeGun.Green);
             
             player.destroyUnit += DeadPlayer;
             SetterPositionPlayer(player);

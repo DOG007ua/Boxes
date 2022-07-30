@@ -55,6 +55,7 @@ namespace Project.Game.Scripts.UnitFolder.Units
 
         public void DamageUnit(float value)
         {
+            Debug.Log($"{name}: damage - {value}");
             HP -= value;
             if (HP <= 0)
                 StartDestroyUnit();

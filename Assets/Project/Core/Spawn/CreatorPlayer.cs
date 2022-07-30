@@ -20,13 +20,13 @@ namespace Project.Core.Spawn
             this.listGuns = listGuns;
         }
 
-        public Unit Spawn(TypeUnits typeUnit)
+        public Unit Spawn(TypeUnits typeUnit, TypeGun typeGun)
         {
             var playerGameObject = GameObject.Instantiate(playerPrefab);
             var playerUnit = playerGameObject.GetComponent<Player>();
             
             
-            var gunData = listGuns.Gun.FirstOrDefault(v => v.Type == TypeGun.Green);
+            var gunData = listGuns.Gun.FirstOrDefault(v => v.Type == typeGun);
             IGun gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Enemy");
             
             IControlerUnit controlerUnit = new ControlerPlayer(dataBorder, playerUnit, gun);

@@ -28,7 +28,7 @@ namespace Project.Core
 
         private void CreateSpawner(DataBorder dataBorder)
         {
-            var creatorBots = new CreatorBots(dataBotsSpawn, dataBorder);
+            var creatorBots = new CreatorBots(dataBotsSpawn, dataBorder, listGuns);
             var creatorPlayer = new CreatorPlayer(playerPrefab, dataBorder, listGuns);
             spawner = new Spawner( 
                 creatorBots,
