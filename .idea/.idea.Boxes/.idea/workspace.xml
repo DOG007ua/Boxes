@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +175,7 @@
       <workItem from="1659018600352" duration="4753000" />
       <workItem from="1659115226807" duration="2963000" />
       <workItem from="1659173283646" duration="8282000" />
-      <workItem from="1659202690526" duration="6175000" />
+      <workItem from="1659202690526" duration="6276000" />
     </task>
     <servers />
   </component>

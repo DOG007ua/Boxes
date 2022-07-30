@@ -1,5 +1,6 @@
 ﻿using Project.Core.Spawn;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Project.Core
 {
@@ -23,7 +24,7 @@ namespace Project.Core
 
         private void FinishGame(GameObject gameObject)
         {
-             
+            SceneManager.LoadScene("MainScene");
         }
     }
 }
