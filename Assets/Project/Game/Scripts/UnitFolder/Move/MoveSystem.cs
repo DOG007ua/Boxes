@@ -20,7 +20,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
         public Vector3 Position => transform.position;
         public event Action finishMove;
         public float Speed => GetSpeed();
-        protected GameStatus gameStatus;
         public Transform transform;
         protected Unit unit;
         protected Vector3 positionMove;
@@ -29,9 +28,8 @@ namespace Project.Game.Scripts.UnitFolder.Move
         private bool isMoveToPosition;
         private DataBorder dataBorder;
 
-        protected MoveSystem(GameStatus gameStatus, Transform transform, Unit unit, DataBorder dataBorder)
+        protected MoveSystem(Transform transform, Unit unit, DataBorder dataBorder)
         {
-            this.gameStatus = gameStatus;
             this.transform = transform;
             this.unit = unit;
             this.dataBorder = dataBorder;

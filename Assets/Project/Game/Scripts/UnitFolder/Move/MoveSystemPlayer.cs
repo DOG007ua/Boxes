@@ -5,8 +5,8 @@ namespace Project.Game.Scripts.UnitFolder.Move
 {
     public class MoveSystemPlayer : MoveSystem
     {
-        public MoveSystemPlayer(GameStatus gameStatus, Transform transform, Unit unit, DataBorder dataBorder) 
-            : base(gameStatus, transform, unit, dataBorder)
+        public MoveSystemPlayer(Transform transform, Unit unit, DataBorder dataBorder) 
+            : base(transform, unit, dataBorder)
         {
         }
         
@@ -15,6 +15,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
             base.Execute();
         }
 
-        protected override float GetSpeed() => 1.5f + gameStatus.Level * 0.1f;
+        protected override float GetSpeed() => 1.5f + GameStatusInstance.Instance.Level * 0.1f;
     }
 }

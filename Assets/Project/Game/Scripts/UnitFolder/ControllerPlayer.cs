@@ -9,10 +9,10 @@ namespace Project.Game.Scripts.UnitFolder
         public IMoveSystem MoveSystem { get; }
         private DataBorder dataBorder;
         
-        public ControllerPlayer(GameStatus gameStatus, DataBorder dataBorder, Unit unit)
+        public ControllerPlayer(DataBorder dataBorder, Unit unit)
         {
             this.dataBorder = dataBorder;
-            MoveSystem = new MoveSystemPlayer(gameStatus, unit.GameObjectUnit.transform, unit, dataBorder);
+            MoveSystem = new MoveSystemPlayer(unit.GameObjectUnit.transform, unit, dataBorder);
         }
 
         public void MoveToDirection(Vector3 vector)

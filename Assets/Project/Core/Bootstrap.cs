@@ -18,18 +18,17 @@ namespace Project.Core
         
         private void Start()
         {
-            var gameStatus = new GameStatus();
             var dataBorder = CalculationBorder();
-            CreateSpawner(gameStatus, dataBorder);
-            gameController = new GameController(spawner, gameStatus);
+            CreateSpawner(dataBorder);
+            gameController = new GameController(spawner);
             gameObject.AddComponent<InputController>().Init(new InputControllerPlayerKey(spawner.Player.ControlerUnit));
         }
 
-        private void CreateSpawner(GameStatus gameStatus, DataBorder dataBorder)
+        private void CreateSpawner(DataBorder dataBorder)
         {
-            var creatorBots = new CreatorBots(dataBotsSpawn, gameStatus, dataBorder);
-            var creatorPlayer = new CreatorPlayer(playerPrefab, gameStatus, dataBorder);
-            spawner = new Spawner(gameStatus, 
+            var creatorBots = new CreatorBots(dataBotsSpawn, dataBorder);
+            var creatorPlayer = new CreatorPlayer(playerPrefab, dataBorder);
+            spawner = new Spawner( 
                 creatorBots,
                 creatorPlayer, 
             new TypeSpawnUnitSystem(), dataBorder);

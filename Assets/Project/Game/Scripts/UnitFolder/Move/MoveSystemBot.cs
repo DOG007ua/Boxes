@@ -7,8 +7,8 @@ namespace Project.Game.Scripts.UnitFolder.Move
 {
     public class MoveSystemBot : MoveSystem
     {
-        public MoveSystemBot(GameStatus gameStatus, Transform transform, Unit unit, DataBorder dataBorder) 
-            : base(gameStatus, transform, unit, dataBorder)
+        public MoveSystemBot(Transform transform, Unit unit, DataBorder dataBorder) 
+            : base(transform, unit, dataBorder)
         {
         }
 
@@ -17,6 +17,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
             base.Execute();
         }
 
-        protected override float GetSpeed() => 1f + gameStatus.Level * 0.02f;
+        protected override float GetSpeed() => 1f + GameStatusInstance.Instance.Level * 0.02f;
     }
 }

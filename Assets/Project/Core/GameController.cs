@@ -5,21 +5,19 @@ namespace Project.Core
 {
     public class GameController
     {
-        private GameStatus GameStatus { get; set; }
         private Spawner Spawner;
 
-        public GameController(Spawner spawner, GameStatus gameStatus)
+        public GameController(Spawner spawner)
         {
-            GameStatus = gameStatus;
             Spawner = spawner;
             Spawner.finishLevel += NextLevel;
         }
 
         private void NextLevel()
         {
-            GameStatus.NextLevel();
+            GameStatusInstance.Instance.NextLevel();
             Spawner.NextLevel();
-            Debug.Log($"Next Level {GameStatus.Level}");
+            Debug.Log($"Next Level {GameStatusInstance.Instance.Level}");
         }
     }
 }

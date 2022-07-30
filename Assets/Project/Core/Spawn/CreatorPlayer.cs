@@ -7,13 +7,11 @@ namespace Project.Core.Spawn
     public class CreatorPlayer : IProduct
     {
         private GameObject playerPrefab;
-        private GameStatus gameStatus;
         private DataBorder dataBorder;
         
-        public CreatorPlayer(GameObject playerPrefab, GameStatus gameStatus, DataBorder dataBorder)
+        public CreatorPlayer(GameObject playerPrefab, DataBorder dataBorder)
         {
             this.playerPrefab = playerPrefab;
-            this.gameStatus = gameStatus;
             this.dataBorder = dataBorder;
         }
 
@@ -21,7 +19,7 @@ namespace Project.Core.Spawn
         {
             var playerGameObject = GameObject.Instantiate(playerPrefab);
             var playerUnit = playerGameObject.GetComponent<Player>();
-            IControllerUnit controllerUnit = new ControllerPlayer(gameStatus, dataBorder, playerUnit);
+            IControllerUnit controllerUnit = new ControllerPlayer(dataBorder, playerUnit);
             IAnimationsUnits animations = new AnimationsUnitsScale();
             playerUnit.Initialization(controllerUnit, animations, 100);
             playerUnit.name = $"Player";

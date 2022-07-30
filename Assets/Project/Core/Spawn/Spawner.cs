@@ -14,7 +14,6 @@ namespace Project.Core.Spawn
         public event Action finishLevel;
         public Player Player;
         private DataBorder dataBorder;
-        private GameStatus gameStatus;
         private IProduct spawnBot;
         private IProduct spawnPlayer;
         private ITypeSpawnUnitSystem typeSpawnUnits;
@@ -26,10 +25,9 @@ namespace Project.Core.Spawn
         private int amountBots = 0;
         private List<TypeUnits> listSpawnUnitsInLevel;
         
-        public Spawner(GameStatus gameStatus, IProduct spawnBot, IProduct spawnPlayer,
+        public Spawner(IProduct spawnBot, IProduct spawnPlayer,
             ITypeSpawnUnitSystem typeSpawnUnits, DataBorder dataBorder)
         {
-            this.gameStatus = gameStatus;
             this.spawnBot = spawnBot;
             this.typeSpawnUnits = typeSpawnUnits;
             this.spawnPlayer = spawnPlayer;
@@ -43,7 +41,7 @@ namespace Project.Core.Spawn
 
         public void NextLevel()
         {
-            listSpawnUnitsInLevel = typeSpawnUnits.GetUnitsInLevel(gameStatus.Level);
+            listSpawnUnitsInLevel = typeSpawnUnits.GetUnitsInLevel(GameStatusInstance.Instance.Level);
         }
 
         private void SpawnBot()

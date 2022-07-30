@@ -21,10 +21,10 @@ namespace Project.Game.Scripts.UnitFolder
 
         private DataBorder dataBorder;
         
-        public ControllerBot(GameStatus gameStatus, DataBorder dataBorder, Unit unit)
+        public ControllerBot(DataBorder dataBorder, Unit unit)
         {
             unit.eventSpawn += StartMove;
-            MoveSystem = new MoveSystemBot(gameStatus, unit.GameObjectUnit.transform, unit, dataBorder);
+            MoveSystem = new MoveSystemBot(unit.GameObjectUnit.transform, unit, dataBorder);
             MoveSystem.finishMove += NewPosition;
             unit.destroyUnit += DestroyUnit;
             this.dataBorder = dataBorder;
