@@ -10,7 +10,7 @@ namespace Project.Game.Scripts.UnitFolder.Units
         public GameObject GunGameObject; 
 
         public IControlerUnit ControlerUnit { get; private set; }
-        public event Action<GameObject> destroyUnit;
+        public event Action<GameObject> eventDestroyUnit;
         public event Action<GameObject> eventSpawn;
         public GameObject GameObjectUnit;
         private IAnimationsUnits animationsUnits;
@@ -44,7 +44,7 @@ namespace Project.Game.Scripts.UnitFolder.Units
         
         public void StartDestroyUnit()
         {
-            destroyUnit.Invoke(this.gameObject);
+            eventDestroyUnit.Invoke(this.gameObject);
             animationsUnits.DestroyUnit(GameObjectUnit);
         }
         

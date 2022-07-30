@@ -11,6 +11,7 @@ namespace Project.Core
         {
             Spawner = spawner;
             Spawner.finishLevel += NextLevel;
+            Spawner.Player.eventDestroyUnit += FinishGame;
         }
 
         private void NextLevel()
@@ -18,6 +19,11 @@ namespace Project.Core
             GameStatusInstance.Instance.NextLevel();
             Spawner.NextLevel();
             Debug.Log($"Next Level {GameStatusInstance.Instance.Level}");
+        }
+
+        private void FinishGame(GameObject gameObject)
+        {
+             
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Project.Game.Scripts.UnitFolder
             GunSystem = new GunSystem(gun);
             GunSystem.Gun.eventReadyShoot += ReadyShoot;
             
-            unit.destroyUnit += DestroyUnit;
+            unit.eventDestroyUnit += DOEventDestroyUnit;
             this.dataBorder = dataBorder;
             FirstShoot();
         }
@@ -73,7 +73,7 @@ namespace Project.Game.Scripts.UnitFolder
 
         private DataBorder dataBorder;
         
-        private void DestroyUnit(GameObject gameObject)
+        private void DOEventDestroyUnit(GameObject gameObject)
         {
             MoveSystem.Stop();
             MoveSystem.IsBlockMove = true;

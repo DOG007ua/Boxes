@@ -56,7 +56,7 @@ namespace Project.Core.Spawn
             
             var bot = spawnBot.Spawn(needUnit.TypeUnit, needUnit.TypeGun);
             
-            bot.destroyUnit += DeadBot;
+            bot.eventDestroyUnit += DeadBot;
             SetterPositionBot(bot);
                 
             amountBots++;
@@ -70,7 +70,7 @@ namespace Project.Core.Spawn
         {
             var player = spawnPlayer.Spawn(TypeUnits.Player, TypeGun.Green);
             
-            player.destroyUnit += DeadPlayer;
+            player.eventDestroyUnit += DeadPlayer;
             SetterPositionPlayer(player);
             Player = player.GetComponent<Player>();
         }
