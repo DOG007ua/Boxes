@@ -330,7 +330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataBotsSpawn: {fileID: 11400000, guid: b87083b0962ee5741b0c2a630dbb2289, type: 2}
   playerPrefab: {fileID: 471179767437320128, guid: 9a3e62400e0e0764ab5c80e44186f1c1, type: 3}
-  listGuns: {fileID: 11400000, guid: a15968ed3c5ee1442bb4b4b02df1e225, type: 2}
+  listGunsPlayer: {fileID: 11400000, guid: a15968ed3c5ee1442bb4b4b02df1e225, type: 2}
+  listGunsBots: {fileID: 11400000, guid: faa969d01f98dc541878fefc79c960b1, type: 2}
 --- !u!4 &1893538488
 Transform:
   m_ObjectHideFlags: 0

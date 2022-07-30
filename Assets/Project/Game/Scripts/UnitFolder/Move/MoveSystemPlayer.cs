@@ -16,6 +16,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
             base.Execute();
         }
 
-        protected override float GetSpeed() => 1.5f + GameStatusInstance.Instance.Level * 0.1f;
+        protected override float GetSpeed() => 3f + GameStatusInstance.Instance.Level * 0.1f;
     }
 }

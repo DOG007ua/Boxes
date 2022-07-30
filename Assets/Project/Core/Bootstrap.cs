@@ -12,7 +12,8 @@ namespace Project.Core
     {
         [SerializeField] private DataBotsSpawn dataBotsSpawn;
         [SerializeField] private GameObject playerPrefab;
-        [SerializeField] private ListGuns listGuns;
+        [SerializeField] private ListGuns listGunsPlayer;
+        [SerializeField] private ListGuns listGunsBots;
         private Spawner spawner;
         private GameController gameController;
             
@@ -28,8 +29,8 @@ namespace Project.Core
 
         private void CreateSpawner(DataBorder dataBorder)
         {
-            var creatorBots = new CreatorBots(dataBotsSpawn, dataBorder, listGuns);
-            var creatorPlayer = new CreatorPlayer(playerPrefab, dataBorder, listGuns);
+            var creatorBots = new CreatorBots(dataBotsSpawn, dataBorder, listGunsBots);
+            var creatorPlayer = new CreatorPlayer(playerPrefab, dataBorder, listGunsPlayer);
             spawner = new Spawner( 
                 creatorBots,
                 creatorPlayer, 
