@@ -106,9 +106,10 @@ GameObject:
   - component: {fileID: 1930312215248992459}
   - component: {fileID: 85088835478397319}
   - component: {fileID: 3485737639497059301}
+  - component: {fileID: 4420005425071911442}
   m_Layer: 0
   m_Name: Bot
-  m_TagString: Untagged
+  m_TagString: Bot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d378400581f4403089aa8b16bac38ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GunGameObject: {fileID: 0}
   GameObjectUnit: {fileID: 4623174178842053232}
 --- !u!65 &3485737639497059301
 BoxCollider:
@@ -155,6 +157,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.87, y: 2.02, z: 2}
   m_Center: {x: 0, y: -0.36, z: 0}
+--- !u!54 &4420005425071911442
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4623174178842053232}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7550544860049114140
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,11 +27,19 @@
         <e p="Project" t="Include">
           <e p="Core" t="Include">
             <e p="Bootstrap.cs" t="Include" />
+            <e p="DataBorder.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameStatus.cs" t="Include" />
+            <e p="GameStatusInstance.cs" t="Include" />
+            <e p="Input" t="Include">
+              <e p="IInputControllerPlayer.cs" t="Include" />
+              <e p="InputController.cs" t="Include" />
+              <e p="InputControllerPlayerKey.cs" t="Include" />
+            </e>
             <e p="ITypeSpawnUnitSystem.cs" t="Include" />
             <e p="Spawn" t="Include">
               <e p="CreatorBots.cs" t="Include" />
+              <e p="CreatorPlayer.cs" t="Include" />
               <e p="DataBotsSpawn.cs" t="Include" />
               <e p="IProduct.cs" t="Include" />
               <e p="Spawner.cs" t="Include" />
@@ -41,14 +49,28 @@
           <e p="Game" t="Include">
             <e p="Scripts" t="Include">
               <e p="UnitFolder" t="Include">
-                <e p="ControllerBot.cs" t="Include" />
-                <e p="ControllerPlayer.cs" t="Include" />
-                <e p="IControllerUnit.cs" t="Include" />
+                <e p="ControlerBot.cs" t="Include" />
+                <e p="ControlerPlayer.cs" t="Include" />
+                <e p="IControlerUnit.cs" t="Include" />
                 <e p="Move" t="Include">
                   <e p="IMoveSystem.cs" t="Include" />
                   <e p="MoveSystem.cs" t="Include" />
                   <e p="MoveSystemBot.cs" t="Include" />
                   <e p="MoveSystemPlayer.cs" t="Include" />
+                </e>
+                <e p="Shoot" t="Include">
+                  <e p="Bullet.cs" t="Include" />
+                  <e p="DataGun.cs" t="Include" />
+                  <e p="Gun.cs" t="Include" />
+                  <e p="GunSystem.cs" t="Include" />
+                  <e p="IGun.cs" t="Include" />
+                  <e p="IGunSystem.cs" t="Include" />
+                  <e p="ListGuns.cs" t="Include" />
+                  <e p="TypeGun.cs" t="Include" />
+                </e>
+                <e p="Spawn" t="Include">
+                  <e p="AnimationsUnitsScale.cs" t="Include" />
+                  <e p="IAnimationsUnits.cs" t="Include" />
                 </e>
                 <e p="Units" t="Include">
                   <e p="Bot.cs" t="Include" />

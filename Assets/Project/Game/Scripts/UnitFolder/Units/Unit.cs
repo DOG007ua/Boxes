@@ -7,14 +7,15 @@ namespace Project.Game.Scripts.UnitFolder.Units
     public class Unit : MonoBehaviour
     {
         public float HP { get; private set; }
-        public IControllerUnit ControlerUnit { get; private set; }
+        public GameObject GunGameObject; 
+
+        public IControlerUnit ControlerUnit { get; private set; }
         public event Action<GameObject> destroyUnit;
         public event Action<GameObject> eventSpawn;
         public GameObject GameObjectUnit;
         private IAnimationsUnits animationsUnits;
-
-
-        public virtual void Initialization(IControllerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
+        
+        public virtual void Initialization(IControlerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
         {
             this.HP = HP;
             this.ControlerUnit = controlerUnit;

@@ -1,4 +1,6 @@
+using System.Linq;
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Shoot;
 using Project.Game.Scripts.UnitFolder.Spawn;
 using Project.Game.Scripts.UnitFolder.Units;
 using UnityEngine;
@@ -9,20 +11,27 @@ namespace Project.Core.Spawn
     {
         private GameObject playerPrefab;
         private DataBorder dataBorder;
+        private ListGuns listGuns;
         
-        public CreatorPlayer(GameObject playerPrefab, DataBorder dataBorder)
+        public CreatorPlayer(GameObject playerPrefab, DataBorder dataBorder, ListGuns listGuns)
         {
             this.playerPrefab = playerPrefab;
             this.dataBorder = dataBorder;
+            this.listGuns = listGuns;
         }
 
         public Unit Spawn(TypeUnits typeUnit)
         {
             var playerGameObject = GameObject.Instantiate(playerPrefab);
             var playerUnit = playerGameObject.GetComponent<Player>();
-            IControllerUnit controllerUnit = new ControllerPlayer(dataBorder, playerUnit);
+            
+            
+            var gunData = listGuns.Gun.FirstOrDefault(v => v.Type == TypeGun.Green);
+            IGun gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Enemy");
+            
+            IControlerUnit controlerUnit = new ControlerPlayer(dataBorder, playerUnit, gun);
             IAnimationsUnits animations = new AnimationsUnitsScale();
-            playerUnit.Initialization(controllerUnit, animations, 100);
+            playerUnit.Initialization(controlerUnit, animations, 100);
             playerUnit.name = $"Player";
             Debug.Log($"Create {playerUnit.name}");
             return playerUnit;

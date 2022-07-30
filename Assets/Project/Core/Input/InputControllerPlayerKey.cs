@@ -6,11 +6,11 @@ namespace Project.Core.Input
 {
     public class InputControllerPlayerKey : IInputControllerPlayer
     {
-        private IControllerUnit controllerPlayer;
+        private IControlerUnit _controlerPlayer;
         
-        public InputControllerPlayerKey(IControllerUnit controllerPlayer)
+        public InputControllerPlayerKey(IControlerUnit controlerPlayer)
         {
-            this.controllerPlayer = controllerPlayer;
+            this._controlerPlayer = controlerPlayer;
         }
 
         public void Execute()
@@ -23,16 +23,25 @@ namespace Project.Core.Input
             {
                 MoveDown();
             }
+            else if (UnityEngine.Input.GetKey(KeyCode.E))
+            {
+                Shoot();
+            }
         }
 
         public void MoveUp()
         {
-            controllerPlayer.MoveToDirection(Vector3.up);
+            _controlerPlayer.MoveToDirection(Vector3.up);
         }
 
         public void MoveDown()
         {
-            controllerPlayer.MoveToDirection(Vector3.down);
+            _controlerPlayer.MoveToDirection(Vector3.down);
+        }
+
+        public void Shoot()
+        {
+            _controlerPlayer.Shoot();
         }
     }
 }

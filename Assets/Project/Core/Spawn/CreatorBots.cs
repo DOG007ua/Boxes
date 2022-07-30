@@ -22,9 +22,9 @@ namespace Project.Core.Spawn
         {
             var botGameObject = GameObject.Instantiate(dataBots.prefabBots);
             var botUnit = botGameObject.GetComponent<Bot>();
-            IControllerUnit controllerUnit = new ControllerBot(dataBorder,  botUnit);
+            IControlerUnit controlerUnit = new ControlerBot(dataBorder,  botUnit);
             IAnimationsUnits animations = new AnimationsUnitsScale();
-            botUnit.Initialization(controllerUnit, animations, 100);
+            botUnit.Initialization(controlerUnit, animations, 100);
             botUnit.name = $"Bot_{count}";
             Debug.Log($"Create {botUnit.name}");
             count++;

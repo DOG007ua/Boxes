@@ -54,23 +54,39 @@
   <ItemGroup>
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Bot.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystemPlayer.cs" />
+     <Compile Include="Assets\Project\Core\Spawn\CreatorBots.cs" />
+     <Compile Include="Assets\Project\Core\DataBorder.cs" />
      <Compile Include="Assets\Project\Core\GameController.cs" />
+     <Compile Include="Assets\Project\Core\Input\InputController.cs" />
+     <Compile Include="Assets\Project\Core\Bootstrap.cs" />
      <Compile Include="Assets\Project\Core\Spawn\Spawner.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Player.cs" />
      <Compile Include="Assets\Project\Core\GameStatus.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControllerBot.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControlerBot.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Spawn\AnimationsUnitsScale.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystemBot.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\IControllerUnit.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\IControlerUnit.cs" />
      <Compile Include="Assets\Project\Core\Spawn\IProduct.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControllerPlayer.cs" />
+     <Compile Include="Assets\Project\Core\Input\InputControllerPlayerKey.cs" />
+     <Compile Include="Assets\Project\Core\Spawn\CreatorPlayer.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControlerPlayer.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Unit.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystem.cs" />
-     <Compile Include="Assets\Project\Core\TypeSpawnUnitSystem.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\IMoveSystem.cs" />
-     <Compile Include="Assets\Project\Core\ITypeSpawnUnitSystem.cs" />
      <Compile Include="Assets\Project\Core\Spawn\DataBotsSpawn.cs" />
-     <Compile Include="Assets\Project\Core\Spawn\CreatorBots.cs" />
-     <Compile Include="Assets\Project\Core\Bootstrap.cs" />
+     <Compile Include="Assets\Project\Core\TypeSpawnUnitSystem.cs" />
+     <Compile Include="Assets\Project\Core\Input\IInputControllerPlayer.cs" />
+     <Compile Include="Assets\Project\Core\ITypeSpawnUnitSystem.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\IMoveSystem.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Spawn\IAnimationsUnits.cs" />
+     <Compile Include="Assets\Project\Core\GameStatusInstance.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\DataGun.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\ListGuns.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\TypeGun.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\IGun.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\Gun.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\Bullet.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\IGunSystem.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\GunSystem.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

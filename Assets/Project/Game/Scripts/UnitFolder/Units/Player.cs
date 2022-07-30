@@ -4,9 +4,9 @@ namespace Project.Game.Scripts.UnitFolder.Units
 {
     public class Player : Unit
     {
-        public void Initialization(IControllerUnit controllerUnit, IAnimationsUnits animationsUnits, float HP)
+        public void Initialization(IControlerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
         {
-            base.Initialization(controllerUnit, animationsUnits, HP);
+            base.Initialization(controlerUnit, animationsUnits, HP);
         }
 
         void Start()

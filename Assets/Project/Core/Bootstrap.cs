@@ -2,6 +2,7 @@ using System;
 using Project.Core.Input;
 using Project.Core.Spawn;
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Shoot;
 using Project.Game.Scripts.UnitFolder.Spawn;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace Project.Core
     {
         [SerializeField] private DataBotsSpawn dataBotsSpawn;
         [SerializeField] private GameObject playerPrefab;
+        [SerializeField] private ListGuns listGuns;
         private Spawner spawner;
         private GameController gameController;
             
@@ -27,7 +29,7 @@ namespace Project.Core
         private void CreateSpawner(DataBorder dataBorder)
         {
             var creatorBots = new CreatorBots(dataBotsSpawn, dataBorder);
-            var creatorPlayer = new CreatorPlayer(playerPrefab, dataBorder);
+            var creatorPlayer = new CreatorPlayer(playerPrefab, dataBorder, listGuns);
             spawner = new Spawner( 
                 creatorBots,
                 creatorPlayer, 

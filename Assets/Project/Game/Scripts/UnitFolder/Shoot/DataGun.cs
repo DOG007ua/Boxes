@@ -7,8 +7,9 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
     public class DataGun
     {
         public TypeGun Type;
-        public GameObject PrefabBoolet;
+        public GameObject PrefabBullet;
         public float TimeReload;
+        public float Damage;
         public float CoefReloadForLevel;
     }
 }
