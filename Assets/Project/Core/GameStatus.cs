@@ -1,19 +1,22 @@
 using System;
 
-public class GameStatus
+namespace Project.Core
 {
-    public int Level { get; private set; }
-    public int TotalSecondsGame => (int)(DateTime.Now - timeStartGame).TotalSeconds;
-    private DateTime timeStartGame;
-
-    public GameStatus()
+    public class GameStatus
     {
-        timeStartGame = DateTime.Now;
-        Level = 0;
-    }
+        public int Level { get; private set; }
+        public int TotalSecondsGame => (int)(DateTime.Now - timeStartGame).TotalSeconds;
+        private DateTime timeStartGame;
 
-    public void NextLevel()
-    {
-        Level++;
+        public GameStatus()
+        {
+            timeStartGame = DateTime.Now;
+            Level = 0;
+        }
+
+        public void NextLevel()
+        {
+            Level++;
+        }
     }
 }

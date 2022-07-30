@@ -1,8 +1,7 @@
-﻿using System;
-using Project.Game.Scripts.UnitFolder.Spawn;
+﻿using Project.Game.Scripts.UnitFolder.Spawn;
 using UnityEngine;
 
-namespace Project.Game.Scripts.UnitFolder
+namespace Project.Game.Scripts.UnitFolder.Units
 {
     public class Bot : Unit
     {
