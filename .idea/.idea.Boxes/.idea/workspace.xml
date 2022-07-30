@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/ITypeSpawnUnitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/ITypeSpawnUnitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsBots.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsBots.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsPlayer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsPlayer.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" afterDir="false" />
@@ -69,6 +69,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/ITypeSpawnUnitSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1F8EF4-975B-4EAC-BEB0-ACCC1B22C9B0/ab/a588ca76/Tween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGunSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/DataGun.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,18 +118,18 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerKey.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/ITypeSpawnUnitSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Bullet.cs" />
       </list>
     </option>
   </component>
@@ -179,7 +180,7 @@
       <workItem from="1659018600352" duration="4753000" />
       <workItem from="1659115226807" duration="2963000" />
       <workItem from="1659173283646" duration="8282000" />
-      <workItem from="1659202690526" duration="3977000" />
+      <workItem from="1659202690526" duration="6021000" />
     </task>
     <servers />
   </component>
@@ -208,54 +209,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="418" height="436" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1659191343644" />
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1659204038643">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1659208583963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659204038643" />
-    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1659204038643">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659208583963" />
+    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1659208583962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1659204038643" />
-    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1659204038643">
+    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1659208583962" />
+    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1659208583962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1659204038643" />
-    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1659204038643">
+    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1659208583962" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1659208583963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1659204038643" />
-    <state width="1493" height="237" key="GridCell.Tab.1.bottom" timestamp="1659204045409">
+    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1659208583963" />
+    <state width="1493" height="237" key="GridCell.Tab.1.bottom" timestamp="1659208593084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659204045409" />
-    <state width="1493" height="237" key="GridCell.Tab.1.center" timestamp="1659204045409">
+    <state width="1493" height="237" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659208593084" />
+    <state width="1493" height="237" key="GridCell.Tab.1.center" timestamp="1659208593084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1659204045409" />
-    <state width="1493" height="237" key="GridCell.Tab.1.left" timestamp="1659204045409">
+    <state width="1493" height="237" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1659208593084" />
+    <state width="1493" height="237" key="GridCell.Tab.1.left" timestamp="1659208593084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1659204045409" />
-    <state width="1493" height="237" key="GridCell.Tab.1.right" timestamp="1659204045409">
+    <state width="1493" height="237" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1659208593084" />
+    <state width="1493" height="237" key="GridCell.Tab.1.right" timestamp="1659208593084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1659204045409" />
-    <state width="1493" height="237" key="GridCell.Tab.2.bottom" timestamp="1659204038558">
+    <state width="1493" height="237" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1659208593084" />
+    <state width="1493" height="237" key="GridCell.Tab.2.bottom" timestamp="1659208583889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659204038558" />
-    <state width="1493" height="237" key="GridCell.Tab.2.center" timestamp="1659204038558">
+    <state width="1493" height="237" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659208583889" />
+    <state width="1493" height="237" key="GridCell.Tab.2.center" timestamp="1659208583889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1659204038558" />
-    <state width="1493" height="237" key="GridCell.Tab.2.left" timestamp="1659204038558">
+    <state width="1493" height="237" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1659208583889" />
+    <state width="1493" height="237" key="GridCell.Tab.2.left" timestamp="1659208583889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1659204038558" />
-    <state width="1493" height="237" key="GridCell.Tab.2.right" timestamp="1659204038558">
+    <state width="1493" height="237" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1659208583889" />
+    <state width="1493" height="237" key="GridCell.Tab.2.right" timestamp="1659208583889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1659204038558" />
+    <state width="1493" height="237" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1659208583889" />
     <state x="594" y="98" key="RiderGenerateDialog" timestamp="1659180638576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -277,17 +278,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" initialLine="57">
+          <url>file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs</url>
+          <line>77</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" initialLine="77">
             <startOffsets>
-              <option value="1690" />
+              <option value="2332" />
             </startOffsets>
             <endOffsets>
-              <option value="1702" />
+              <option value="2350" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

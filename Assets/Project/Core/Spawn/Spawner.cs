@@ -44,6 +44,7 @@ namespace Project.Core.Spawn
         public void NextLevel()
         {
             listSpawnUnitsInLevel = typeSpawnUnits.GetUnitsInLevel(GameStatusInstance.Instance.Level);
+            TimerSpawn(2);
         }
 
         private void SpawnBot()

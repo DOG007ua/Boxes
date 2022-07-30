@@ -30,9 +30,8 @@ namespace Project.Core.Spawn
             IGun gun = botUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Player");
             IControlerUnit controlerUnit = new ControlerBot(dataBorder, botUnit, gun);
             IAnimationsUnits animations = new AnimationsUnitsScale();
-            botUnit.Initialization(controlerUnit, animations, 100);
+            botUnit.Initialization(controlerUnit, animations, 20);
             botUnit.name = $"Bot_{count}";
-            Debug.Log($"Create {botUnit.name}");
             count++;
             return botUnit;
         }

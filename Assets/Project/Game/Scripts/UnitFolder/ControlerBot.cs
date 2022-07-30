@@ -14,8 +14,9 @@ namespace Project.Game.Scripts.UnitFolder
         public IGunSystem GunSystem { get; }
 
         private float pauseShoot = 1;
-        private Tween tweenShoot;
-        private Tween tweenPreShoot;
+        private Sequence tweenShoot;
+        private Sequence tweenPreShoot;
+        private Sequence tweenFirstShoot;
 
         public ControlerBot(DataBorder dataBorder, Unit unit, IGun gun)
         {
@@ -33,7 +34,7 @@ namespace Project.Game.Scripts.UnitFolder
         private void FirstShoot()
         {
             float timeToNextShoot = Random.Range(1, 3);
-            DOTween.Sequence()
+            tweenFirstShoot = DOTween.Sequence()
                 .AppendInterval(timeToNextShoot)
                 .AppendCallback(Shoot);
         }
@@ -46,7 +47,7 @@ namespace Project.Game.Scripts.UnitFolder
         private void ReadyShoot()
         {
             Debug.Log("ReadyShoot");
-            float timeToNextShoot = Random.Range(1, 3);
+            float timeToNextShoot = Random.Range(1.0f, 3.0f);
             tweenPreShoot = DOTween.Sequence()
                 .AppendInterval(timeToNextShoot)
                 .AppendCallback(Shoot);
@@ -63,8 +64,6 @@ namespace Project.Game.Scripts.UnitFolder
                 .AppendCallback(() => MoveSystem.IsBlockMove = false)
                 .AppendCallback(NewPosition);
 
-
-            
         }
 
         public void Execute()
@@ -80,6 +79,7 @@ namespace Project.Game.Scripts.UnitFolder
             MoveSystem.IsBlockMove = true;
             tweenShoot.Kill();
             tweenPreShoot.Kill();
+            tweenFirstShoot.Kill();
         }
 
         private void StartMove(GameObject bot)

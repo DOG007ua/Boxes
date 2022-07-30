@@ -15,7 +15,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
         {
             this.damage = damage;
             this.tagEnemy = tagEnemy;
-            Debug.Log(tagEnemy);
+            Debug.Log($"Spawn {name}");
         }
 
         // Update is called once per frame
@@ -23,7 +23,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
         {
             transform.position += speed * transform.right * Time.deltaTime;
             time += Time.deltaTime;
-            if(time > 5)
+            if(time > 2)
             {
                 Destroy(this.gameObject);
             }
