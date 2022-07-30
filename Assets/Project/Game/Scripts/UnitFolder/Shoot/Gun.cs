@@ -17,6 +17,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
             this.tagEnemy = tagEnemy;
             return this;
         }
+        
 
         public bool ReadyShoot { get; private set; } = true;
         

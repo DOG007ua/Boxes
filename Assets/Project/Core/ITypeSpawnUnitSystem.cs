@@ -4,6 +4,6 @@ namespace Project.Core
 {
     public interface ITypeSpawnUnitSystem
     {
-        List<TypeUnits> GetUnitsInLevel(int level);
+        List<DataSpawnUnit> GetUnitsInLevel(int level);
     }
 }

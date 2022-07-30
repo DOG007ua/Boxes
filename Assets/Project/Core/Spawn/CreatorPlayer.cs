@@ -27,7 +27,7 @@ namespace Project.Core.Spawn
             
             
             var gunData = listGuns.Gun.FirstOrDefault(v => v.Type == typeGun);
-            IGun gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Enemy");
+            IGun gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Bot");
             
             IControlerUnit controlerUnit = new ControlerPlayer(dataBorder, playerUnit, gun);
             IAnimationsUnits animations = new AnimationsUnitsScale();

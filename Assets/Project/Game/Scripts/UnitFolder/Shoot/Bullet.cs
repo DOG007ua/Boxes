@@ -15,6 +15,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
         {
             this.damage = damage;
             this.tagEnemy = tagEnemy;
+            Debug.Log(tagEnemy);
         }
 
         // Update is called once per frame

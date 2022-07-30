@@ -16,5 +16,15 @@ MonoBehaviour:
   - Type: 0
     PrefabBullet: {fileID: 6021416469926688629, guid: 36917dc5a0efac14ea910a2114789816, type: 3}
     TimeReload: 1
+    Damage: 5
+    CoefReloadForLevel: 1
+  - Type: 2
+    PrefabBullet: {fileID: 6021416469926688629, guid: 899f8550e1abcb34d8517135e6d655a7, type: 3}
+    TimeReload: 2
     Damage: 10
+    CoefReloadForLevel: 1
+  - Type: 0
+    PrefabBullet: {fileID: 6021416469926688629, guid: 63d930d9b8a21314eb9e6b48cf2d6fe8, type: 3}
+    TimeReload: 4
+    Damage: 50
     CoefReloadForLevel: 1

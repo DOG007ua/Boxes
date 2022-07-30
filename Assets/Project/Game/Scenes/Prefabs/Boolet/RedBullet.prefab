@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8147803703620064973}
   - component: {fileID: 1941969394449241998}
   m_Layer: 0
-  m_Name: GreenBoolet
+  m_Name: RedBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4ffeb0ed251bb84abec4ff966a8507e, type: 2}
+  - {fileID: 2100000, guid: 96b4ab4f2aab12243b3a26c5be7b56a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

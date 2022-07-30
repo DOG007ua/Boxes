@@ -25,7 +25,7 @@ namespace Project.Core.Spawn
         private float maxTimeSpawn = 5;
         private float minTimeSpawn = 1;
         private int amountBots = 0;
-        private List<TypeUnits> listSpawnUnitsInLevel;
+        private List<DataSpawnUnit> listSpawnUnitsInLevel;
         
         public Spawner(IProduct spawnBot, IProduct spawnPlayer,
             ITypeSpawnUnitSystem typeSpawnUnits, DataBorder dataBorder)
@@ -53,7 +53,7 @@ namespace Project.Core.Spawn
             var needUnit = listSpawnUnitsInLevel.First();
             listSpawnUnitsInLevel.Remove(needUnit);
             
-            var bot = spawnBot.Spawn(needUnit, TypeGun.Green);
+            var bot = spawnBot.Spawn(needUnit.TypeUnit, needUnit.TypeGun);
             
             bot.destroyUnit += DeadBot;
             SetterPositionBot(bot);
