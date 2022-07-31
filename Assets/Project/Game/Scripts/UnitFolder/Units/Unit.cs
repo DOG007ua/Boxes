@@ -12,8 +12,11 @@ namespace Project.Game.Scripts.UnitFolder.Units
         public IControlerUnit ControlerUnit { get; private set; }
         public event Action<GameObject> eventDestroyUnit;
         public event Action<GameObject> eventSpawn;
+        [SerializeField] private GameObject gameObjectHP;
         public GameObject GameObjectUnit;
+        private IVisibleHP visibleHP;
         private IAnimationsUnits animationsUnits;
+        private event Action<float, float> eventChangeHP;
         
         public virtual void Initialization(IControlerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
         {
@@ -23,6 +26,10 @@ namespace Project.Game.Scripts.UnitFolder.Units
             AnimationSpawn();
             animationsUnits.finishSpawn += (gameObject) => eventSpawn?.Invoke(gameObject);
             animationsUnits.finishDestroy += DestroyUnit;
+
+            visibleHP = gameObjectHP.GetComponent<IVisibleHP>();
+            visibleHP.Initialize(HP);
+            eventChangeHP += visibleHP.ChangeHP;
         }
         
 
@@ -57,6 +64,7 @@ namespace Project.Game.Scripts.UnitFolder.Units
         {
             Debug.Log($"{name}: damage - {value}");
             HP -= value;
+            eventChangeHP?.Invoke(value, HP);
             if (HP <= 0)
                 StartDestroyUnit();
         }

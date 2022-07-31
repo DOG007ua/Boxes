@@ -87,6 +87,8 @@
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\Gun.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\IMoveSystem.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Spawn\IAnimationsUnits.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\IVisibleHP.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\VisibleLineHP.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

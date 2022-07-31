@@ -74,8 +74,10 @@
                 </e>
                 <e p="Units" t="Include">
                   <e p="Bot.cs" t="Include" />
+                  <e p="IVisibleHP.cs" t="Include" />
                   <e p="Player.cs" t="Include" />
                   <e p="Unit.cs" t="Include" />
+                  <e p="VisibleLineHP.cs" t="Include" />
                 </e>
               </e>
             </e>
