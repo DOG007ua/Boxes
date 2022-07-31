@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using Project.Core;
 using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Shoot
@@ -52,8 +53,17 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
         {
             ReadyShoot = false;
             DOTween.Sequence()
-                .AppendInterval(dataGun.TimeReload)
+                .AppendInterval(GetTimeReload())
                 .AppendCallback(() => FinishReload());
+        }
+
+        private float GetTimeReload()
+        {
+            var timeReload = dataGun.TimeReload * (1 - (dataGun.CoefReloadForLevel * GameStatusInstance.Instance.Level));
+            if (timeReload < dataGun.TimeReload / 3) timeReload = dataGun.TimeReload / 3;
+            
+            Debug.Log(timeReload);
+            return timeReload;
         }
 
         private void FinishReload()

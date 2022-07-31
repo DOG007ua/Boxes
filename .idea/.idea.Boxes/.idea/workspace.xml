@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/UI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/UI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,19 +93,16 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Spawn/AnimationsUnitsScale.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Bot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/GameStatusInstance.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/GameStatus.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/ListGuns.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/TypeGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Boolet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/DataGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/GreenGun.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerUnit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/ITypeSpawnUnitSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
@@ -127,11 +120,14 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGunSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/DataGun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" />
       </list>
     </option>
   </component>
@@ -184,7 +180,7 @@
       <workItem from="1659115226807" duration="2963000" />
       <workItem from="1659173283646" duration="8282000" />
       <workItem from="1659202690526" duration="6276000" />
-      <workItem from="1659256531141" duration="7218000" />
+      <workItem from="1659256531141" duration="7623000" />
     </task>
     <servers />
   </component>
@@ -296,13 +292,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs</url>
-          <line>24</line>
+          <line>25</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" initialLine="22">
             <startOffsets>
-              <option value="659" />
+              <option value="679" />
             </startOffsets>
             <endOffsets>
-              <option value="682" />
+              <option value="702" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
