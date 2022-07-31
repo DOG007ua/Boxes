@@ -73,6 +73,7 @@
                   <e p="IAnimationsUnits.cs" t="Include" />
                 </e>
                 <e p="Units" t="Include">
+                  <e p="AnimationPlayer.cs" t="Include" />
                   <e p="Bot.cs" t="Include" />
                   <e p="IVisibleHP.cs" t="Include" />
                   <e p="Player.cs" t="Include" />

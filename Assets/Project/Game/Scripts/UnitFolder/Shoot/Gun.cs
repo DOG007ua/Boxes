@@ -8,6 +8,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
     public class Gun : MonoBehaviour
     {
         public event Action eventReadyShoot;
+        public event Action eventShoot;
         public TypeGun TypeGun { get; private set; }
         [SerializeField]private Transform pointShoot;
         private DataGun dataGun;
@@ -47,6 +48,8 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
             bullet.transform.position = pointShoot.position;        
             //bullet.transform.rotation = Quaternion.LookRotation(pointShoot.position);
             bullet.transform.rotation = pointShoot.rotation;
+            
+            eventShoot?.Invoke();
         }
 
         private void Reload()

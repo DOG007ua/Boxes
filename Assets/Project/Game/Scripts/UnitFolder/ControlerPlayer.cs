@@ -13,14 +13,19 @@ namespace Project.Game.Scripts.UnitFolder
         private DataBorder dataBorder;
         private ListGuns listGuns;
         private int positionGun = 0;
+        private AnimationPlayer animationPlayer;
         
-        public ControlerPlayer(DataBorder dataBorder, Unit unit, IGunSystem gunSystem, ListGuns listGuns)
+        public ControlerPlayer(DataBorder dataBorder, Unit unit, IGunSystem gunSystem, 
+            ListGuns listGuns, AnimationPlayer animationPlayer)
         {
             this.dataBorder = dataBorder;
             this.listGuns = listGuns;
+            this.animationPlayer = animationPlayer;
             MoveSystem = new MoveSystemPlayer(unit.GameObjectUnit.transform, unit, dataBorder);
             GunSystem = gunSystem;
             CalculationPositionGun();
+            GunSystem.Gun.eventReadyShoot += animationPlayer.FinishReload;
+            GunSystem.Gun.eventShoot += animationPlayer.Reload;
 
         }
 

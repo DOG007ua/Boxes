@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/AnimationPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/AnimationPlayer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/MainPers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/MainPers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,11 +79,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/GunSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Input/IInputControllerPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/AnimationPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Bot.cs" />
@@ -111,7 +117,6 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/VisibleLineHP.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/IInputControllerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerKey.cs" />
@@ -120,14 +125,16 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGunSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Move/MoveSystemPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/DataGun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/AnimationPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" />
       </list>
     </option>
   </component>
@@ -180,7 +187,7 @@
       <workItem from="1659115226807" duration="2963000" />
       <workItem from="1659173283646" duration="8282000" />
       <workItem from="1659202690526" duration="6276000" />
-      <workItem from="1659256531141" duration="7623000" />
+      <workItem from="1659256531141" duration="9056000" />
     </task>
     <servers />
   </component>
@@ -292,13 +299,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs</url>
-          <line>25</line>
+          <line>26</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" initialLine="22">
             <startOffsets>
-              <option value="679" />
+              <option value="719" />
             </startOffsets>
             <endOffsets>
-              <option value="702" />
+              <option value="742" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />

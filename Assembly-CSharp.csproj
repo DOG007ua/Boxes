@@ -52,6 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Project\Core\UI.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Bot.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\MoveSystemPlayer.cs" />
      <Compile Include="Assets\Project\Core\Spawn\CreatorBots.cs" />
@@ -70,8 +71,11 @@
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\GunSystem.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\IControlerUnit.cs" />
      <Compile Include="Assets\Project\Core\Spawn\IProduct.cs" />
+     <Compile Include="Assets\Project\Core\Input\InputControllerPlayerButton.cs" />
      <Compile Include="Assets\Project\Core\Input\InputControllerPlayerKey.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\AnimationPlayer.cs" />
      <Compile Include="Assets\Project\Core\Spawn\CreatorPlayer.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\VisibleLineHP.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControlerPlayer.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\Bullet.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Unit.cs" />
@@ -82,13 +86,10 @@
      <Compile Include="Assets\Project\Core\TypeSpawnUnitSystem.cs" />
      <Compile Include="Assets\Project\Core\Input\IInputControllerPlayer.cs" />
      <Compile Include="Assets\Project\Core\ITypeSpawnUnitSystem.cs" />
+     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\IVisibleHP.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\Gun.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Move\IMoveSystem.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Spawn\IAnimationsUnits.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\IVisibleHP.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\VisibleLineHP.cs" />
-     <Compile Include="Assets\Project\Core\Input\InputControllerPlayerButton.cs" />
-     <Compile Include="Assets\Project\Core\UI.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
