@@ -8,5 +8,6 @@ namespace Project.Core.Input
         void MoveUp();
         void MoveDown();
         void Shoot();
+        void ChangeGun();
     }
 }

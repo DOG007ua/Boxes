@@ -10,6 +10,7 @@ namespace Project.Game.Scripts.UnitFolder
         IGunSystem GunSystem { get; }
         void MoveToDirection(Vector3 vector);
         void Shoot();
+        void ChangeGun();
         void Execute();
     }
 }

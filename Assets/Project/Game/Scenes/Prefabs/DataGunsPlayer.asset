@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df77e6def0e4be887eb1765a145b11d, type: 3}
   m_Name: DataGunsPlayer
   m_EditorClassIdentifier: 
-  Gun:
+  Guns:
   - Type: 0
     PrefabBullet: {fileID: 6021416469926688629, guid: 36917dc5a0efac14ea910a2114789816, type: 3}
-    TimeReload: 0.5
+    TimeReload: 1
     Damage: 5
-    CoefReloadForLevel: 1
+    CoefReloadForLevel: 1.1
   - Type: 2
     PrefabBullet: {fileID: 6021416469926688629, guid: 899f8550e1abcb34d8517135e6d655a7, type: 3}
-    TimeReload: 1
-    Damage: 10
-    CoefReloadForLevel: 1
+    TimeReload: 2
+    Damage: 12
+    CoefReloadForLevel: 1.2
   - Type: 1
     PrefabBullet: {fileID: 6021416469926688629, guid: 63d930d9b8a21314eb9e6b48cf2d6fe8, type: 3}
-    TimeReload: 2
-    Damage: 15
-    CoefReloadForLevel: 1
+    TimeReload: 3
+    Damage: 20
+    CoefReloadForLevel: 1.2

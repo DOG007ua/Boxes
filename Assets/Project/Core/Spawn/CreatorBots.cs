@@ -26,8 +26,8 @@ namespace Project.Core.Spawn
         {
             var botGameObject = GameObject.Instantiate(dataBots.prefabBots);
             var botUnit = botGameObject.GetComponent<Bot>();
-            var gunData = listGuns.Gun.FirstOrDefault(v => v.Type == typeGun);
-            IGun gun = botUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Player");
+            var gunData = listGuns.Guns.FirstOrDefault(v => v.Type == typeGun);
+            var gun = botUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Player");
             IControlerUnit controlerUnit = new ControlerBot(dataBorder, botUnit, gun);
             IAnimationsUnits animations = new AnimationsUnitsScale();
             botUnit.Initialization(controlerUnit, animations, 20);

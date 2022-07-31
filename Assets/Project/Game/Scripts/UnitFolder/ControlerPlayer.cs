@@ -11,13 +11,31 @@ namespace Project.Game.Scripts.UnitFolder
         public IMoveSystem MoveSystem { get; }
         public IGunSystem GunSystem { get; }
         private DataBorder dataBorder;
+        private ListGuns listGuns;
+        private int positionGun = 0;
         
-        public ControlerPlayer(DataBorder dataBorder, Unit unit, IGun gun)
+        public ControlerPlayer(DataBorder dataBorder, Unit unit, IGunSystem gunSystem, ListGuns listGuns)
         {
             this.dataBorder = dataBorder;
+            this.listGuns = listGuns;
             MoveSystem = new MoveSystemPlayer(unit.GameObjectUnit.transform, unit, dataBorder);
-            GunSystem = new GunSystem(gun);
+            GunSystem = gunSystem;
+            CalculationPositionGun();
+
         }
+
+        private void CalculationPositionGun()
+        {
+            for (int i = 0; i < listGuns.Guns.Count; i++)
+            {
+                if (listGuns.Guns[i].Type == GunSystem.Gun.TypeGun)
+                {
+                    positionGun = i;
+                }
+            }
+        }
+        
+        
 
         public void MoveToDirection(Vector3 vector)
         {
@@ -33,6 +51,15 @@ namespace Project.Game.Scripts.UnitFolder
         public void Execute()
         {
             MoveSystem.Execute();
+        }
+
+        public void ChangeGun()
+        {
+            positionGun++;
+            if (positionGun >= listGuns.Guns.Count) positionGun = 0;
+            var gun = listGuns.Guns[positionGun];
+            
+            GunSystem.Gun.ChangeGun(gun);
         }
     }
 }

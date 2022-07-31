@@ -51,5 +51,10 @@ namespace Project.Core.Input
         {
             controlerPlayer.Shoot();
         }
+
+        public void ChangeGun()
+        {
+            controlerPlayer.ChangeGun();
+        }
     }
 }

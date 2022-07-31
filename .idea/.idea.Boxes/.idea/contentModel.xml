@@ -63,7 +63,6 @@
                   <e p="DataGun.cs" t="Include" />
                   <e p="Gun.cs" t="Include" />
                   <e p="GunSystem.cs" t="Include" />
-                  <e p="IGun.cs" t="Include" />
                   <e p="IGunSystem.cs" t="Include" />
                   <e p="ListGuns.cs" t="Include" />
                   <e p="TypeGun.cs" t="Include" />

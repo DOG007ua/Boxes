@@ -2,12 +2,12 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
 {
     public class GunSystem : IGunSystem
     {
-        public GunSystem(IGun gun)
+        public GunSystem(Gun gun)
         {
             Gun = gun;
         }
 
-        public IGun Gun { get; }
+        public Gun Gun { get; }
         public void Shoot()
         {
             Gun.Shoot();

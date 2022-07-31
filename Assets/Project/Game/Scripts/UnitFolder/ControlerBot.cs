@@ -18,7 +18,7 @@ namespace Project.Game.Scripts.UnitFolder
         private Sequence tweenPreShoot;
         private Sequence tweenFirstShoot;
 
-        public ControlerBot(DataBorder dataBorder, Unit unit, IGun gun)
+        public ControlerBot(DataBorder dataBorder, Unit unit, Gun gun)
         {
             unit.eventSpawn += StartMove;
             MoveSystem = new MoveSystemBot(unit.GameObjectUnit.transform, unit, dataBorder);
@@ -63,6 +63,11 @@ namespace Project.Game.Scripts.UnitFolder
                 .AppendCallback(() => MoveSystem.IsBlockMove = false)
                 .AppendCallback(NewPosition);
 
+        }
+
+        public void ChangeGun()
+        {
+            
         }
 
         public void Execute()

@@ -72,7 +72,6 @@
      <Compile Include="Assets\Project\Core\Spawn\IProduct.cs" />
      <Compile Include="Assets\Project\Core\Input\InputControllerPlayerKey.cs" />
      <Compile Include="Assets\Project\Core\Spawn\CreatorPlayer.cs" />
-     <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\IGun.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\ControlerPlayer.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\Bullet.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Unit.cs" />

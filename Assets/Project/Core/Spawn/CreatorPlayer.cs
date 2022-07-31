@@ -26,10 +26,11 @@ namespace Project.Core.Spawn
             var playerUnit = playerGameObject.GetComponent<Player>();
             
             
-            var gunData = listGuns.Gun.FirstOrDefault(v => v.Type == typeGun);
-            IGun gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Bot");
+            var gunData = listGuns.Guns.FirstOrDefault(v => v.Type == typeGun);
+            var gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Bot");
             
-            IControlerUnit controlerUnit = new ControlerPlayer(dataBorder, playerUnit, gun);
+            IGunSystem gunSystem = new GunSystem(gun);
+            IControlerUnit controlerUnit = new ControlerPlayer(dataBorder, playerUnit, gunSystem, listGuns);
             IAnimationsUnits animations = new AnimationsUnitsScale();
             playerUnit.Initialization(controlerUnit, animations, 100);
             playerUnit.name = $"Player";

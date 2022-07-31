@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Project.Game.Scripts.UnitFolder.Shoot
 {
-    public class Gun : MonoBehaviour, IGun
+    public class Gun : MonoBehaviour
     {
         public event Action eventReadyShoot;
+        public TypeGun TypeGun { get; private set; }
         [SerializeField]private Transform pointShoot;
         private DataGun dataGun;
         private string tagEnemy;
@@ -15,7 +16,13 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
         {
             this.dataGun = dataGun;
             this.tagEnemy = tagEnemy;
+            TypeGun = this.dataGun.Type;
             return this;
+        }
+
+        public void ChangeGun(DataGun dataGun)
+        {
+            this.dataGun = dataGun;
         }
         
 
