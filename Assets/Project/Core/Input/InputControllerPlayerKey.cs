@@ -4,16 +4,22 @@ using UnityEngine;
 
 namespace Project.Core.Input
 {
-    public class InputControllerPlayerKey : IInputControllerPlayer
+    public class InputControllerPlayerKey : MonoBehaviour, IInputControllerPlayer
     {
-        private IControlerUnit _controlerPlayer;
+        private IControlerUnit controlerPlayer;
         
-        public InputControllerPlayerKey(IControlerUnit controlerPlayer)
+        /*public InputControllerPlayerKey(IControlerUnit controlerPlayer)
         {
-            this._controlerPlayer = controlerPlayer;
-        }
+            this.controlerPlayer = controlerPlayer;
+        }*/
 
-        public void Execute()
+        
+        public void Initialize(IControlerUnit controlerPlayer)
+        {
+            this.controlerPlayer = controlerPlayer;
+        }
+        
+        public void Update()
         {
             if (UnityEngine.Input.GetKey(KeyCode.W))
             {
@@ -31,17 +37,17 @@ namespace Project.Core.Input
 
         public void MoveUp()
         {
-            _controlerPlayer.MoveToDirection(Vector3.up);
+            controlerPlayer.MoveToDirection(Vector3.up);
         }
 
         public void MoveDown()
         {
-            _controlerPlayer.MoveToDirection(Vector3.down);
+            controlerPlayer.MoveToDirection(Vector3.down);
         }
 
         public void Shoot()
         {
-            _controlerPlayer.Shoot();
+            controlerPlayer.Shoot();
         }
     }
 }

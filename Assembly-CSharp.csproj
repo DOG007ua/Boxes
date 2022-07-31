@@ -59,7 +59,6 @@
      <Compile Include="Assets\Project\Core\GameController.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Shoot\TypeGun.cs" />
      <Compile Include="Assets\Project\Core\GameStatusInstance.cs" />
-     <Compile Include="Assets\Project\Core\Input\InputController.cs" />
      <Compile Include="Assets\Project\Core\Bootstrap.cs" />
      <Compile Include="Assets\Project\Core\Spawn\Spawner.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\Player.cs" />
@@ -89,6 +88,7 @@
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Spawn\IAnimationsUnits.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\IVisibleHP.cs" />
      <Compile Include="Assets\Project\Game\Scripts\UnitFolder\Units\VisibleLineHP.cs" />
+     <Compile Include="Assets\Project\Core\Input\InputControllerPlayerButton.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

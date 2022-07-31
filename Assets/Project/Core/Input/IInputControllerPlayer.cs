@@ -1,7 +1,12 @@
+using Project.Game.Scripts.UnitFolder;
+
 namespace Project.Core.Input
 {
     public interface IInputControllerPlayer
     {
-        void Execute();
+        void Initialize(IControlerUnit controlerPlayer);
+        void MoveUp();
+        void MoveDown();
+        void Shoot();
     }
 }

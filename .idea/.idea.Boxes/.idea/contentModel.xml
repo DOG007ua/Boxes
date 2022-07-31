@@ -33,7 +33,7 @@
             <e p="GameStatusInstance.cs" t="Include" />
             <e p="Input" t="Include">
               <e p="IInputControllerPlayer.cs" t="Include" />
-              <e p="InputController.cs" t="Include" />
+              <e p="InputControllerPlayerButton.cs" t="Include" />
               <e p="InputControllerPlayerKey.cs" t="Include" />
             </e>
             <e p="ITypeSpawnUnitSystem.cs" t="Include" />

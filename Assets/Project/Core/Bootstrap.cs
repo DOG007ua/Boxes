@@ -14,6 +14,7 @@ namespace Project.Core
         [SerializeField] private GameObject playerPrefab;
         [SerializeField] private ListGuns listGunsPlayer;
         [SerializeField] private ListGuns listGunsBots;
+        [SerializeField] private GameObject gameObjectInputController;
         private Spawner spawner;
         private GameController gameController;
             
@@ -24,7 +25,8 @@ namespace Project.Core
             var dataBorder = CalculationBorder();
             CreateSpawner(dataBorder);
             gameController = new GameController(spawner);
-            gameObject.AddComponent<InputController>().Init(new InputControllerPlayerKey(spawner.Player.ControlerUnit));
+            gameObjectInputController.GetComponent<IInputControllerPlayer>()
+                .Initialize(spawner.Player.ControlerUnit);
         }
 
         private void CreateSpawner(DataBorder dataBorder)

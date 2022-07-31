@@ -32,7 +32,6 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
 
         private void ShootDown()
         {
-            Debug.Log($"Shoot {dataGun.PrefabBullet.name}");
             var bullet = Instantiate(dataGun.PrefabBullet);
             var bulletScript = bullet.GetComponent<Bullet>();
             bulletScript.Initialize(dataGun.Damage, tagEnemy);

@@ -46,7 +46,6 @@ namespace Project.Game.Scripts.UnitFolder
 
         private void ReadyShoot()
         {
-            Debug.Log("ReadyShoot");
             float timeToNextShoot = Random.Range(1.0f, 3.0f);
             tweenPreShoot = DOTween.Sequence()
                 .AppendInterval(timeToNextShoot)
