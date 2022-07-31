@@ -20,28 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60c807d-0c63-4829-81ef-7c1dd76c9a57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/UI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Core/UI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Boxes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Input/IInputControllerPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Input/IInputControllerPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Input/InputControllerPlayerKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsBots.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsBots.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsPlayer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsPlayer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsPlayer.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scenes/Prefabs/DataGunsPlayer.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControlerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControlerUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/GunSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/GunSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGun.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGun.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGunSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/IGunSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/ListGuns.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/ListGuns.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Spawn/AnimationsUnitsScale.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/DataBorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Core/UI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/ListGuns.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Core/Spawn/IProduct.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControllerUnit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/IControllerPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Player.cs" />
@@ -128,12 +114,10 @@
         <option value="$PROJECT_DIR$/Assets/Project/Core/TypeSpawnUnitSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Bullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/IVisibleHP.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/VisibleLineHP.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Units/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Spawn/CreatorBots.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Core/Input/IInputControllerPlayer.cs" />
@@ -145,6 +129,9 @@
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/Shoot/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Game/Scripts/UnitFolder/ControlerPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Core/Bootstrap.cs" />
       </list>
     </option>
   </component>
@@ -197,7 +184,7 @@
       <workItem from="1659115226807" duration="2963000" />
       <workItem from="1659173283646" duration="8282000" />
       <workItem from="1659202690526" duration="6276000" />
-      <workItem from="1659256531141" duration="6546000" />
+      <workItem from="1659256531141" duration="7218000" />
     </task>
     <servers />
   </component>
@@ -286,10 +273,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1659206562950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1659269287824">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1659272038947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1659269287824" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1659272038947" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

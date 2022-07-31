@@ -15,6 +15,7 @@ namespace Project.Core
         [SerializeField] private ListGuns listGunsPlayer;
         [SerializeField] private ListGuns listGunsBots;
         [SerializeField] private GameObject gameObjectInputController;
+        [SerializeField] private UI controllerUI;
         private Spawner spawner;
         private GameController gameController;
             
@@ -27,6 +28,8 @@ namespace Project.Core
             gameController = new GameController(spawner);
             gameObjectInputController.GetComponent<IInputControllerPlayer>()
                 .Initialize(spawner.Player.ControlerUnit);
+            gameController.eventNextLevel += controllerUI.ChangeLevel;
+            controllerUI.ChangeLevel(GameStatusInstance.Instance.Level);
         }
 
         private void CreateSpawner(DataBorder dataBorder)
