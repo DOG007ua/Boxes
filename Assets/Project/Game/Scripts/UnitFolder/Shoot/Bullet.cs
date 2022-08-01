@@ -15,10 +15,8 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
         {
             this.damage = damage;
             this.tagEnemy = tagEnemy;
-            Debug.Log($"Spawn {name}");
         }
 
-        // Update is called once per frame
         void Update()
         {
             transform.position += speed * transform.right * Time.deltaTime;

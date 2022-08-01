@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Project.Core
+namespace Project.Core.Spawn
 {
     public interface ITypeSpawnUnitSystem
     {

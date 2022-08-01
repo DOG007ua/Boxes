@@ -1,5 +1,6 @@
 using System.Linq;
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Controller;
 using Project.Game.Scripts.UnitFolder.Shoot;
 using Project.Game.Scripts.UnitFolder.Spawn;
 using Project.Game.Scripts.UnitFolder.Units;
@@ -12,7 +13,7 @@ namespace Project.Core.Spawn
         private GameObject playerPrefab;
         private DataBorder dataBorder;
         private ListGuns listGuns;
-        
+
         public CreatorPlayer(GameObject playerPrefab, DataBorder dataBorder, ListGuns listGuns)
         {
             this.playerPrefab = playerPrefab;
@@ -24,18 +25,18 @@ namespace Project.Core.Spawn
         {
             var playerGameObject = GameObject.Instantiate(playerPrefab);
             var playerUnit = playerGameObject.GetComponent<Player>();
-            
-            
+
             var gunData = listGuns.Guns.FirstOrDefault(v => v.Type == typeGun);
             var gun = playerUnit.GunGameObject.GetComponent<Gun>().Initialize(gunData, "Bot");
-            
+
             IGunSystem gunSystem = new GunSystem(gun);
             var animationPlayer = playerGameObject.GetComponent<AnimationPlayer>();
-            IControlerUnit controlerUnit = new ControlerPlayer(dataBorder, playerUnit, gunSystem, listGuns, animationPlayer);
+            IControllerUnit controllerUnit =
+                new ControllerPlayer(dataBorder, playerUnit, gunSystem, listGuns, animationPlayer);
             IAnimationsUnits animations = new AnimationsUnitsScale();
-            playerUnit.Initialization(controlerUnit, animations, 100);
-            playerUnit.name = $"Player";
-            Debug.Log($"Create {playerUnit.name}");
+            playerUnit.Initialization(controllerUnit, animations, 100);
+            playerUnit.name = "Player";
+            
             return playerUnit;
         }
     }

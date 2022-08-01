@@ -6,5 +6,6 @@ namespace Project.Core.Spawn
     public class DataBotsSpawn : ScriptableObject
     {
         public GameObject prefabBots;
+        public float HP;
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Guns:
   - Type: 0
     PrefabBullet: {fileID: 6021416469926688629, guid: 36917dc5a0efac14ea910a2114789816, type: 3}
-    TimeReload: 1
+    TimeReload: 0.5
     Damage: 5
     CoefReloadForLevel: 0.2
   - Type: 2

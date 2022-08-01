@@ -13,11 +13,6 @@ namespace Project.Game.Scripts.UnitFolder.Move
         {
         }
 
-        public override void Execute()
-        {
-            base.Execute();
-        }
-
         protected override float GetSpeed() => 1f + GameStatusInstance.Instance.Level * 0.3f;
     }
 }

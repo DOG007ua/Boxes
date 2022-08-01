@@ -13,8 +13,19 @@ namespace Project.Core
         public GameController(Spawner spawner)
         {
             Spawner = spawner;
+            Subscription();
+        }
+
+        private void Subscription()
+        {
             Spawner.finishLevel += NextLevel;
             Spawner.Player.eventDestroyUnit += FinishGame;
+        }
+
+        private void UnSubscription()
+        {
+            Spawner.finishLevel -= NextLevel;
+            Spawner.Player.eventDestroyUnit -= FinishGame;
         }
 
         private void NextLevel()

@@ -4,11 +4,10 @@ using Project.Game.Scripts.UnitFolder.Move;
 using Project.Game.Scripts.UnitFolder.Shoot;
 using Project.Game.Scripts.UnitFolder.Units;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
-namespace Project.Game.Scripts.UnitFolder
+namespace Project.Game.Scripts.UnitFolder.Controller
 {
-    public class ControlerBot: IControlerUnit
+    public class ControllerBot : IControllerUnit
     {
         public IMoveSystem MoveSystem { get; }
         public IGunSystem GunSystem { get; }
@@ -17,18 +16,33 @@ namespace Project.Game.Scripts.UnitFolder
         private Sequence tweenShoot;
         private Sequence tweenPreShoot;
         private Sequence tweenFirstShoot;
+        private Unit unit;
 
-        public ControlerBot(DataBorder dataBorder, Unit unit, Gun gun)
+        public ControllerBot(DataBorder dataBorder, Unit unit, Gun gun)
         {
-            unit.eventSpawn += StartMove;
-            MoveSystem = new MoveSystemBot(unit.GameObjectUnit.transform, unit, dataBorder);
-            MoveSystem.finishMove += NewPosition;
-            GunSystem = new GunSystem(gun);
-            GunSystem.Gun.eventReadyShoot += ReadyShoot;
-            
-            unit.eventDestroyUnit += DOEventDestroyUnit;
             this.dataBorder = dataBorder;
+            this.unit = unit;
+            MoveSystem = new MoveSystemBot(unit.GameObjectUnit.transform, unit, dataBorder);
+            GunSystem = new GunSystem(gun);
+
+            Subscription(unit);
             FirstShoot();
+        }
+
+        private void Subscription(Unit unit)
+        {
+            MoveSystem.finishMove += NewPosition;
+            GunSystem.Gun.eventReadyShoot += ReadyShoot;
+            unit.eventDestroyUnit += DestroyUnit;
+            unit.eventSpawn += StartMove;
+        }
+
+        private void UnSubscription(Unit unit)
+        {
+            MoveSystem.finishMove -= NewPosition;
+            GunSystem.Gun.eventReadyShoot -= ReadyShoot;
+            unit.eventDestroyUnit -= DestroyUnit;
+            unit.eventSpawn -= StartMove;
         }
 
         private void FirstShoot()
@@ -38,7 +52,7 @@ namespace Project.Game.Scripts.UnitFolder
                 .AppendInterval(timeToNextShoot)
                 .AppendCallback(Shoot);
         }
-        
+
         public void MoveToDirection(Vector3 vector)
         {
             MoveSystem.MoveToDirection(vector);
@@ -62,12 +76,10 @@ namespace Project.Game.Scripts.UnitFolder
                 .AppendCallback(GunSystem.Shoot)
                 .AppendCallback(() => MoveSystem.IsBlockMove = false)
                 .AppendCallback(NewPosition);
-
         }
 
         public void ChangeGun()
         {
-            
         }
 
         public void Execute()
@@ -76,8 +88,8 @@ namespace Project.Game.Scripts.UnitFolder
         }
 
         private DataBorder dataBorder;
-        
-        private void DOEventDestroyUnit(GameObject gameObject)
+
+        private void DestroyUnit(GameObject gameObject)
         {
             MoveSystem.Stop();
             MoveSystem.IsBlockMove = true;
@@ -104,6 +116,11 @@ namespace Project.Game.Scripts.UnitFolder
                 posY,
                 MoveSystem.Position.z
             );
+        }
+
+        void OnDestroy()
+        {
+            UnSubscription(unit);
         }
     }
 }

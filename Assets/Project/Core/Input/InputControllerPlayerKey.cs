@@ -1,4 +1,5 @@
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Controller;
 using Project.Game.Scripts.UnitFolder.Move;
 using UnityEngine;
 
@@ -6,19 +7,15 @@ namespace Project.Core.Input
 {
     public class InputControllerPlayerKey : MonoBehaviour, IInputControllerPlayer
     {
-        private IControlerUnit controlerPlayer;
-        
-        /*public InputControllerPlayerKey(IControlerUnit controlerPlayer)
-        {
-            this.controlerPlayer = controlerPlayer;
-        }*/
+        private IControllerUnit controllerPlayer;
 
-        
-        public void Initialize(IControlerUnit controlerPlayer)
+
+        public void Initialize(IControllerUnit controllerPlayer)
         {
-            this.controlerPlayer = controlerPlayer;
+            this.controllerPlayer = controllerPlayer;
+            this.gameObject.SetActive(true);
         }
-        
+
         public void Update()
         {
             if (UnityEngine.Input.GetKey(KeyCode.W))
@@ -33,26 +30,30 @@ namespace Project.Core.Input
             {
                 Shoot();
             }
+            else if (UnityEngine.Input.GetKey(KeyCode.R))
+            {
+                ChangeGun();
+            }
         }
 
         public void MoveUp()
         {
-            controlerPlayer.MoveToDirection(Vector3.up);
+            controllerPlayer.MoveToDirection(Vector3.up);
         }
 
         public void MoveDown()
         {
-            controlerPlayer.MoveToDirection(Vector3.down);
+            controllerPlayer.MoveToDirection(Vector3.down);
         }
 
         public void Shoot()
         {
-            controlerPlayer.Shoot();
+            controllerPlayer.Shoot();
         }
 
         public void ChangeGun()
         {
-            controlerPlayer.ChangeGun();
+            controllerPlayer.ChangeGun();
         }
     }
 }

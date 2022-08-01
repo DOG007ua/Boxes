@@ -1,25 +1,32 @@
 using Project.Game.Scripts.UnitFolder;
+using Project.Game.Scripts.UnitFolder.Controller;
 using UnityEngine;
 
 namespace Project.Core.Input
 {
     public class InputControllerPlayerButton : MonoBehaviour, IInputControllerPlayer
     {
-        private IControlerUnit controlerPlayer;
+        private IControllerUnit controllerPlayer;
         private bool moveUp = false;
-        private bool  moveDown = false;
-        
+        private bool moveDown = false;
+
+        public void Initialize(IControllerUnit controllerPlayer)
+        {
+            this.controllerPlayer = controllerPlayer;
+            this.gameObject.SetActive(true);
+        }
+
         private void Update()
         {
             if (moveUp) MoveUp();
-            else if(moveDown) MoveDown();
+            else if (moveDown) MoveDown();
         }
 
         public void StartMoveUp()
         {
             moveUp = true;
         }
-        
+
         public void StartMoveDown()
         {
             moveDown = true;
@@ -31,30 +38,24 @@ namespace Project.Core.Input
             moveDown = false;
         }
 
-        public void Initialize(IControlerUnit controlerPlayer)
-        {
-            this.controlerPlayer = controlerPlayer;
-        }
-        
-        
         public void MoveUp()
         {
-            controlerPlayer.MoveToDirection(Vector3.up);
+            controllerPlayer.MoveToDirection(Vector3.up);
         }
 
         public void MoveDown()
         {
-            controlerPlayer.MoveToDirection(Vector3.down);
+            controllerPlayer.MoveToDirection(Vector3.down);
         }
 
         public void Shoot()
         {
-            controlerPlayer.Shoot();
+            controllerPlayer.Shoot();
         }
 
         public void ChangeGun()
         {
-            controlerPlayer.ChangeGun();
+            controllerPlayer.ChangeGun();
         }
     }
 }

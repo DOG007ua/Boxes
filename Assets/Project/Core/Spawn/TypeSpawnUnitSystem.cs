@@ -1,63 +1,52 @@
 ﻿using System.Collections.Generic;
 using Project.Game.Scripts.UnitFolder.Shoot;
 
-namespace Project.Core
+namespace Project.Core.Spawn
 {
     public class TypeSpawnUnitSystem : ITypeSpawnUnitSystem
     {
         private int maxUnits = 10;
+
         private List<int> amountUnitsInLevel = new List<int>()
         {
-            1,2,3,6,6,7
+            3, 3, 4, 5, 8, 9
         };
 
         private List<TypeGun> typeGunInLevel = new List<TypeGun>()
         {
-            TypeGun.Green, TypeGun.Blue, TypeGun.Red
+            TypeGun.Green, TypeGun.Green, TypeGun.Blue, TypeGun.Red
         };
-        
+
         public List<DataSpawnUnit> GetUnitsInLevel(int level)
         {
             var amountUnits = AmountUnits(level);
-            List<DataSpawnUnit> listDataUnits = new List<DataSpawnUnit>();
-            
+            var listDataUnits = new List<DataSpawnUnit>();
+
             for (int i = 0; i < amountUnits; i++)
             {
                 var dataUnit = new DataSpawnUnit(TypeUnits.DefaultBot, GunInLevel(level));
                 listDataUnits.Add(dataUnit);
             }
-            
+
             return listDataUnits;
         }
 
         private int AmountUnits(int level)
         {
-            int amountUnits = 0;
-            if (level < amountUnitsInLevel.Count)
-            {
-                amountUnits =  amountUnitsInLevel[level];
-            }
-            else
-            {
-                amountUnits = maxUnits;
-            }
+            var amountUnits = 
+                level < amountUnitsInLevel.Count 
+                ? amountUnitsInLevel[level] 
+                : maxUnits;
 
             return amountUnits;
         }
 
         private TypeGun GunInLevel(int level)
         {
-            TypeGun typeGun = TypeGun.Green;
-            if (level < typeGunInLevel.Count)
-            {
-                typeGun =  typeGunInLevel[level];
-            }
-            else
-            {
-                typeGun = TypeGun.Red;
-            }
-
-            return typeGun;
+            return 
+                level < typeGunInLevel.Count 
+                    ? typeGunInLevel[level] 
+                    : TypeGun.Red;
         }
     }
 

@@ -26,7 +26,7 @@ namespace Project.Core.Spawn
         private float minTimeSpawn = 1;
         private int amountBots = 0;
         private List<DataSpawnUnit> listSpawnUnitsInLevel;
-        
+
         public Spawner(IProduct spawnBot, IProduct spawnPlayer,
             ITypeSpawnUnitSystem typeSpawnUnits, DataBorder dataBorder)
         {
@@ -50,26 +50,23 @@ namespace Project.Core.Spawn
         private void SpawnBot()
         {
             if (!IsNeedSpawnBot() || listSpawnUnitsInLevel.Count == 0) return;
-            
+
             var needUnit = listSpawnUnitsInLevel.First();
             listSpawnUnitsInLevel.Remove(needUnit);
-            
+
             var bot = spawnBot.Spawn(needUnit.TypeUnit, needUnit.TypeGun);
-            
             bot.eventDestroyUnit += DeadBot;
             SetterPositionBot(bot);
-                
+
             amountBots++;
             if (IsNeedSpawnBot())
-            {
                 TimerSpawn();
-            }
         }
 
         private void SpawnPlayer()
         {
             var player = spawnPlayer.Spawn(TypeUnits.Player, TypeGun.Green);
-            
+
             player.eventDestroyUnit += DeadPlayer;
             SetterPositionPlayer(player);
             Player = player.GetComponent<Player>();
@@ -90,15 +87,14 @@ namespace Project.Core.Spawn
         private void SetterPositionBot(Unit bot)
         {
             var posY = Random.Range(dataBorder.YMin, dataBorder.YMax);
-            var posX = Random.Range(-3, -0.5f);
+            var posX = Random.Range(-2, -0.5f);
             bot.gameObject.transform.position = new Vector3(
-                //dataBorder.XRight + posX,
-                4,
+                dataBorder.XRight + posX,
                 posY,
                 0
-                );
+            );
         }
-        
+
         private void SetterPositionPlayer(Unit bot)
         {
             bot.gameObject.transform.position = new Vector3(
@@ -108,15 +104,15 @@ namespace Project.Core.Spawn
             );
         }
 
-        private bool IsNeedSpawnBot() => (amountBots < maxBotsNow);
-        
+        private bool IsNeedSpawnBot() => amountBots < maxBotsNow;
+
         private void TimerSpawn(float seconds)
         {
             DOTween.Sequence()
                 .AppendInterval(seconds)
                 .AppendCallback(SpawnBot);
         }
-        
+
         private void TimerSpawn()
         {
             var seconds = Random.Range(minTimeSpawn, maxTimeSpawn);
@@ -126,16 +122,13 @@ namespace Project.Core.Spawn
         private void DeadBot(GameObject bot)
         {
             amountBots--;
+            
             if (listSpawnUnitsInLevel.Count == 0 && amountBots == 0)
-            {
                 finishLevel?.Invoke();
-            }
             else
-            {
                 TimerSpawn();
-            }
         }
-        
+
         private void DeadPlayer(GameObject bot)
         {
             

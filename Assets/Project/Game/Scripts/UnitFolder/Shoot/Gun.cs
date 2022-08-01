@@ -45,8 +45,7 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
             var bulletScript = bullet.GetComponent<Bullet>();
             bulletScript.Initialize(dataGun.Damage, tagEnemy);
 
-            bullet.transform.position = pointShoot.position;        
-            //bullet.transform.rotation = Quaternion.LookRotation(pointShoot.position);
+            bullet.transform.position = pointShoot.position;
             bullet.transform.rotation = pointShoot.rotation;
             
             eventShoot?.Invoke();

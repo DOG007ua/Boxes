@@ -1,12 +1,13 @@
-﻿using Project.Game.Scripts.UnitFolder.Spawn;
+﻿using Project.Game.Scripts.UnitFolder.Controller;
+using Project.Game.Scripts.UnitFolder.Spawn;
 
 namespace Project.Game.Scripts.UnitFolder.Units
 {
     public class Player : Unit
     {
-        public void Initialization(IControlerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
+        public void Initialization(IControllerUnit controllerUnit, IAnimationsUnits animationsUnits, float HP)
         {
-            base.Initialization(controlerUnit, animationsUnits, HP);
+            base.Initialization(controllerUnit, animationsUnits, HP);
         }
 
         void Start()

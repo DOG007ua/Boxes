@@ -2,9 +2,9 @@
 using Project.Game.Scripts.UnitFolder.Shoot;
 using UnityEngine;
 
-namespace Project.Game.Scripts.UnitFolder
+namespace Project.Game.Scripts.UnitFolder.Controller
 {
-    public interface IControlerUnit
+    public interface IControllerUnit
     {
         IMoveSystem MoveSystem { get; }
         IGunSystem GunSystem { get; }

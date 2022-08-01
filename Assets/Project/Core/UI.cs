@@ -7,8 +7,17 @@ namespace Project.Core
     {
         [SerializeField] private Text Level;
 
+        /*void Update()
+        {
+            UpdateText(GameStatusInstance.Instance.Level);
+        }*/
         
         public void ChangeLevel(int level)
+        {
+            UpdateText(level);
+        }
+
+        private void UpdateText(int level)
         {
             Level.text = $"Level: {level + 1}";
         }

@@ -4,9 +4,9 @@ using Project.Game.Scripts.UnitFolder.Shoot;
 using Project.Game.Scripts.UnitFolder.Units;
 using UnityEngine;
 
-namespace Project.Game.Scripts.UnitFolder
+namespace Project.Game.Scripts.UnitFolder.Controller
 {
-    public class ControlerPlayer : IControlerUnit
+    public class ControllerPlayer : IControllerUnit
     {
         public IMoveSystem MoveSystem { get; }
         public IGunSystem GunSystem { get; }
@@ -15,7 +15,7 @@ namespace Project.Game.Scripts.UnitFolder
         private int positionGun = 0;
         private AnimationPlayer animationPlayer;
         
-        public ControlerPlayer(DataBorder dataBorder, Unit unit, IGunSystem gunSystem, 
+        public ControllerPlayer(DataBorder dataBorder, Unit unit, IGunSystem gunSystem, 
             ListGuns listGuns, AnimationPlayer animationPlayer)
         {
             this.dataBorder = dataBorder;
@@ -23,25 +23,23 @@ namespace Project.Game.Scripts.UnitFolder
             this.animationPlayer = animationPlayer;
             MoveSystem = new MoveSystemPlayer(unit.GameObjectUnit.transform, unit, dataBorder);
             GunSystem = gunSystem;
-            CalculationPositionGun();
+            CalculationPositionGunInList();
+            Subscription();
+        }
+
+        private void Subscription()
+        {
             GunSystem.Gun.eventReadyShoot += animationPlayer.FinishReload;
             GunSystem.Gun.eventShoot += animationPlayer.Reload;
-
         }
-
-        private void CalculationPositionGun()
+        
+        private void UnSubscription()
         {
-            for (int i = 0; i < listGuns.Guns.Count; i++)
-            {
-                if (listGuns.Guns[i].Type == GunSystem.Gun.TypeGun)
-                {
-                    positionGun = i;
-                }
-            }
+            GunSystem.Gun.eventReadyShoot -= animationPlayer.FinishReload;
+            GunSystem.Gun.eventShoot -= animationPlayer.Reload;
         }
+       
         
-        
-
         public void MoveToDirection(Vector3 vector)
         {
             MoveSystem.MoveToDirection(vector);
@@ -65,6 +63,17 @@ namespace Project.Game.Scripts.UnitFolder
             var gun = listGuns.Guns[positionGun];
             
             GunSystem.Gun.ChangeGun(gun);
+        }
+        
+        private void CalculationPositionGunInList()
+        {
+            for (int i = 0; i < listGuns.Guns.Count; i++)
+            {
+                if (listGuns.Guns[i].Type == GunSystem.Gun.TypeGun)
+                {
+                    positionGun = i;
+                }
+            }
         }
     }
 }

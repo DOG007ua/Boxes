@@ -33,26 +33,29 @@
             <e p="GameStatusInstance.cs" t="Include" />
             <e p="Input" t="Include">
               <e p="IInputControllerPlayer.cs" t="Include" />
+              <e p="InputController.cs" t="Include" />
               <e p="InputControllerPlayerButton.cs" t="Include" />
               <e p="InputControllerPlayerKey.cs" t="Include" />
             </e>
-            <e p="ITypeSpawnUnitSystem.cs" t="Include" />
             <e p="Spawn" t="Include">
               <e p="CreatorBots.cs" t="Include" />
               <e p="CreatorPlayer.cs" t="Include" />
               <e p="DataBotsSpawn.cs" t="Include" />
               <e p="IProduct.cs" t="Include" />
+              <e p="ITypeSpawnUnitSystem.cs" t="Include" />
               <e p="Spawner.cs" t="Include" />
+              <e p="TypeSpawnUnitSystem.cs" t="Include" />
             </e>
-            <e p="TypeSpawnUnitSystem.cs" t="Include" />
             <e p="UI.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="Scripts" t="Include">
               <e p="UnitFolder" t="Include">
-                <e p="ControlerBot.cs" t="Include" />
-                <e p="ControlerPlayer.cs" t="Include" />
-                <e p="IControlerUnit.cs" t="Include" />
+                <e p="Controller" t="Include">
+                  <e p="ControllerBot.cs" t="Include" />
+                  <e p="ControllerPlayer.cs" t="Include" />
+                  <e p="IControllerUnit.cs" t="Include" />
+                </e>
                 <e p="Move" t="Include">
                   <e p="IMoveSystem.cs" t="Include" />
                   <e p="MoveSystem.cs" t="Include" />

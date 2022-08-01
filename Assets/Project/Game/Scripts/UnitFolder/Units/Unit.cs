@@ -1,4 +1,5 @@
 using System;
+using Project.Game.Scripts.UnitFolder.Controller;
 using Project.Game.Scripts.UnitFolder.Spawn;
 using UnityEngine;
 
@@ -6,22 +7,23 @@ namespace Project.Game.Scripts.UnitFolder.Units
 {
     public class Unit : MonoBehaviour
     {
-        public float HP { get; private set; }
-        public GameObject GunGameObject; 
-
-        public IControlerUnit ControlerUnit { get; private set; }
         public event Action<GameObject> eventDestroyUnit;
         public event Action<GameObject> eventSpawn;
-        [SerializeField] private GameObject gameObjectHP;
+        public event Action<float, float> eventChangeHP;
+        public float HP { get; private set; }
+        public GameObject GunGameObject;
+        public IControllerUnit ControllerUnit { get; private set; }
         public GameObject GameObjectUnit;
+        [SerializeField] private GameObject gameObjectHP;
+
         private IVisibleHP visibleHP;
         private IAnimationsUnits animationsUnits;
-        private event Action<float, float> eventChangeHP;
-        
-        public virtual void Initialization(IControlerUnit controlerUnit, IAnimationsUnits animationsUnits, float HP)
+
+
+        public virtual void Initialization(IControllerUnit controllerUnit, IAnimationsUnits animationsUnits, float HP)
         {
             this.HP = HP;
-            this.ControlerUnit = controlerUnit;
+            this.ControllerUnit = controllerUnit;
             this.animationsUnits = animationsUnits;
             AnimationSpawn();
             animationsUnits.finishSpawn += (gameObject) => eventSpawn?.Invoke(gameObject);
@@ -32,34 +34,6 @@ namespace Project.Game.Scripts.UnitFolder.Units
             eventChangeHP += visibleHP.ChangeHP;
         }
         
-
-        private void AnimationSpawn()
-        {
-            animationsUnits.StartSpawn(GameObjectUnit);
-        }
-
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            ControlerUnit.Execute();
-        }
-        
-        public void StartDestroyUnit()
-        {
-            eventDestroyUnit.Invoke(this.gameObject);
-            animationsUnits.DestroyUnit(GameObjectUnit);
-        }
-        
-        private void DestroyUnit(GameObject gameObject)
-        {
-            Destroy(this.gameObject);
-        }
-
         public void DamageUnit(float value)
         {
             Debug.Log($"{name}: damage - {value}");
@@ -67,6 +41,28 @@ namespace Project.Game.Scripts.UnitFolder.Units
             eventChangeHP?.Invoke(value, HP);
             if (HP <= 0)
                 StartDestroyUnit();
+        }
+
+        private void AnimationSpawn()
+        {
+            animationsUnits.StartSpawn(GameObjectUnit);
+        }
+
+        private void Update()
+        {
+            ControllerUnit.Execute();
+        }
+      
+
+        private void StartDestroyUnit()
+        {
+            eventDestroyUnit.Invoke(this.gameObject);
+            animationsUnits.DestroyUnit(GameObjectUnit);
+        }
+
+        private void DestroyUnit(GameObject gameObject)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
