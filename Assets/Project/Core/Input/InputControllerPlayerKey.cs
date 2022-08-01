@@ -30,7 +30,7 @@ namespace Project.Core.Input
             {
                 Shoot();
             }
-            else if (UnityEngine.Input.GetKey(KeyCode.R))
+            else if (UnityEngine.Input.GetKeyDown(KeyCode.R))
             {
                 ChangeGun();
             }

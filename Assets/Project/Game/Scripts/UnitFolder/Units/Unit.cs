@@ -36,7 +36,6 @@ namespace Project.Game.Scripts.UnitFolder.Units
         
         public void DamageUnit(float value)
         {
-            Debug.Log($"{name}: damage - {value}");
             HP -= value;
             eventChangeHP?.Invoke(value, HP);
             if (HP <= 0)

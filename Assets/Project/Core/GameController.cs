@@ -38,6 +38,7 @@ namespace Project.Core
 
         private void FinishGame(GameObject gameObject)
         {
+            GameStatusInstance.Instance.ResetLevel();
             SceneManager.LoadScene("MainScene");
         }
     }

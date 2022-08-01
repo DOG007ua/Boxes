@@ -64,7 +64,6 @@ namespace Project.Game.Scripts.UnitFolder.Shoot
             var timeReload = dataGun.TimeReload * (1 - (dataGun.CoefReloadForLevel * GameStatusInstance.Instance.Level));
             if (timeReload < dataGun.TimeReload / 3) timeReload = dataGun.TimeReload / 3;
             
-            Debug.Log(timeReload);
             return timeReload;
         }
 

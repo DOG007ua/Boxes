@@ -18,5 +18,10 @@ namespace Project.Core
         {
             Level++;
         }
+
+        public void ResetLevel()
+        {
+            Level = 0;
+        }
     }
 }
